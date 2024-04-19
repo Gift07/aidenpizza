@@ -5,9 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { FiPhone } from "react-icons/fi";
+import { BsCart2 } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 const NavBarComponent = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { cartTotalItems } = useSelector((state) => state.cart);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -58,6 +61,19 @@ const NavBarComponent = () => {
                   >
                     Home
                   </Link>
+                </li>
+                <li className="relative">
+                  <Link
+                    href={"/cart"}
+                    className={`hover:text-textprimary duration-200 cursor-pointer  bg-gray-200 rounded-3xl flex items-center px-3 gap-x-1 py-1${
+                      pathname === "/cart" ? "text-primary" : "text-black"
+                    }`}
+                  >
+                    <BsCart2 /> Cart
+                  </Link>
+                  <div className="bg-primary absolute h-6 w-6 flex items-center justify-center rounded-full text-white text-sm -top-5 right-0">
+                    {cartTotalItems}
+                  </div>
                 </li>
                 <li>
                   <Link

@@ -1,57 +1,72 @@
-import React from "react";
-import { FaCartShopping } from "react-icons/fa6";
-import { MdStar } from "react-icons/md";
-import Image from "next/image";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import MenuItems from "./MenuItems";
+import { isEmpty } from "lodash";
 
 const AllItems = () => {
+  const tabs = [
+    "GOURMET PIZZA",
+    "APPETIZERS",
+    "SOUPS",
+    "GOURMET SALAD",
+    "WINGS",
+    "EXTRAS",
+    "PIDE",
+    "SUBS",
+    "SANDWICHES",
+    "WRAPS",
+    "LAHMACUN",
+    "PASTA",
+    "PASTA ENTREES",
+    "KEBAB ENTREES",
+    "DESSERTS",
+    "BEVERAGES",
+  ];
+  const [menus, setMenus] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const getPizza = async () => {
+      setLoading(true);
+      console.log("got int the fn");
+      const res = await fetch(`/api/menus`);
+      const response = await res.json();
+
+      setMenus(response.data);
+      setLoading(false);
+    };
+    getPizza();
+  }, []);
+  console.log(menus);
   return (
-    <div className="w-full flex flex-col items-center justify-center py-16">
-      <div className="w-full pl-44">
-        <div className="flex text-2xl font-semibold items-center text-primary">
-          All Items <hr className="w-24 h-1 bg-primary" />
+    <div className="relative">
+      {loading ? (
+        <div className="w-full flex items-center justify-center">
+          Loading...
         </div>
-      </div>
-      <div className="w-[80%] grid grid-cols-4 place-items-center gap-4 pt-20">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="border border-primary/40 rounded-xl w-full py-6"
-          >
-            <div className="w-full flex items-center justify-center">
-              <Image
-                src={"/pizza-2.png"}
-                alt="header"
-                height={200}
-                width={200}
-                style={{ objectFit: "contain" }}
-                className="transform transition-transform hover:-rotate-90"
-              />
-            </div>
-            <div className="w-full px-4">
-              <div className="w-full flex items-center justify-between py-2">
-                <h1 className="text-xl font-semibold">Seaweed Pizza</h1>
-                <h1 className="text-xl font-semibold text-primary">$13.4</h1>
-              </div>
-              <div className="flex items-center gap-x-1 text-xl">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <div key={i} className="text-secondary">
-                    <MdStar />
-                  </div>
-                ))}
-              </div>
-              <div className="py-2">
-                Officia sunt est veniam quis consequat laborum culpa aliquip
-                mollit excepteur mollit cillum.
-              </div>
-              <div>
-                <button className="bg-secondary w-56 h-14 rounded-full flex items-center justify-center text-white text-xl">
-                  <FaCartShopping /> order now
-                </button>
-              </div>
+      ) : (
+        <div className="w-full flex flex-col items-center justify-center py-16">
+          <div className="w-full pl-44">
+            <div className="flex text-2xl font-semibold items-center text-primary">
+              All Items <hr className="w-24 h-1 bg-primary" />
             </div>
           </div>
-        ))}
-      </div>
+          <div className="w-[80%]">
+            {tabs.map((tab, i) => {
+              const items = isEmpty(menus) ? [] : menus[tab];
+              return (
+                <div key={i} className="w-full py-12">
+                  <div>
+                    <h1 className="text-xl font-semibold py-2">{tab}</h1>
+                  </div>
+                  <MenuItems menus={items} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,646 @@
+{
+  "Menu": {
+    "POPULAR ITEMS": [
+      {
+        "name": "Turkish Style Pizza",
+        "description": "Doner kebab, sun-dried tomatoes, roasted red peppers and mozzarella cheese with tomato sauce.",
+        "price": 14.95
+      }
+    ],
+    "Create Your Own": [
+      {
+        "name": "Create Your Own Pizza",
+        "description": "Cheese pizza with marinara sauce.",
+        "price": 10.95
+      }
+    ],
+    "GOURMET PIZZA": [
+      {
+        "name": "Greek Pizza",
+        "description": "Green and red peppers, Kalamata olives, feta cheese and mozzarella cheese with tomato sauce.",
+        "price": 14.95
+      },
+      {
+        "name": "Portabella Mushroom Pizza",
+        "description": "Garlic sauce, fresh spinach, slices of portabella mushrooms, roasted red peppers, feta cheese and mozzarella cheese. Vegetarian.",
+        "price": 14.95
+      },
+      {
+        "name": "Artichoke Pizza",
+        "description": "Garlic sauce, fresh spinach, onions, tomatoes, mushrooms, artichoke hearts and mozzarella cheese with tomato sauce. Vegetarian.",
+        "price": 14.95
+      },
+      {
+        "name": "Meatlovers Pizza",
+        "description": "Pepperoni, sausage, salami, and ground beef with mozzarella cheese and tomato sauce.",
+        "price": 14.95
+      },
+      {
+        "name": "Vegetarian Pizza",
+        "description": "Fresh green peppers, mushrooms, sliced onions, black olives, fresh tomato and mozzarella cheese with tomato sauce.",
+        "price": 14.95
+      },
+      {
+        "name": "Mediterranean Pizza",
+        "description": "Artichoke hearts, roasted red peppers, goat cheese and mozzarella cheese with tomato sauce.",
+        "price": 14.95
+      },
+      {
+        "name": "Margarita Pizza",
+        "description": "Fresh mozzarella slices on top of mozzarella cheese, olive oil and tomato sauce. Fresh basil leaves are added at the end. Vegetarian.",
+        "price": 14.95
+      },
+      {
+        "name": "Roma Pizza",
+        "description": "Red tomato sauce with turkey sausage, beef pepperoni, mushrooms, fresh mozzarella and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "Pesto Chicken Pizza",
+        "description": "Pesto sauce with grilled chicken breast chunks, sundried tomatoes, roasted red peppers, red onions, kalamata olives with feta cheese and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "Alfredo Chicken Pizza",
+        "description": "Homemade alfredo sauce with grilled chicken breast chunks and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "White Pizza",
+        "description": "Garlic sauce, fresh mozzarella slices, ricotta cheese and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "Supreme Pizza",
+        "description": "Pepperoni, sausage, ground beef, mushrooms, green peppers, onions and black olives and mozzarella cheese with tomato sauce.",
+        "price": 14.95
+      },
+      {
+        "name": "BBQ Chicken Pizza",
+        "description": "Barbecue sauce, grilled chicken, red onion, pineapple and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "Buffalo Chicken Pizza",
+        "description": "Buffalo and ranch sauce, grilled chicken, red onion, green pepper and mozzarella cheese.",
+        "price": 14.95
+      },
+      {
+        "name": "Hawaiian Chicken BBQ Pizza",
+        "description": "Barbeque sauce, pineapple, grilled chicken, red onion, and mozzarella cheese.",
+        "price": 14.95
+      }
+    ],
+    "APPETIZERS": [
+      {
+        "name": "French Fries",
+        "description": "Deep-fried 'till golden brown, with a crunchy exterior and a light fluffy interior. Seasoned to perfection!",
+        "price": 4.5
+      },
+      {
+        "name": "Garlic Bread",
+        "description": "Halal.",
+        "price": 4.75,
+        "halal": true
+      },
+      {
+        "name": "Cheesy Bread",
+        "description": "Halal.",
+        "price": 5.95,
+        "halal": true
+      },
+      {
+        "name": "Dolma",
+        "description": "Grape leaves stuffed with rice, spices, and herbs. Halal.",
+        "price": 6.25,
+        "halal": true
+      },
+      {
+        "name": "Onion Rings",
+        "description": "Crispy onion slices deep-fried until golden-brown.",
+        "price": 5.95
+      },
+      {
+        "name": "Mozzarella Sticks",
+        "description": "Vegetarian. Halal.",
+        "price": 6.25,
+        "vegetarian": true,
+        "halal": true
+      },
+      {
+        "name": "Hummus",
+        "description": "Pureed chickpeas, tahini, garlic, spices and olive oil. Served with pita bread. Halal.",
+        "price": 6.5,
+        "halal": true
+      },
+      {
+        "name": "Babaghannush",
+        "description": "Grilled eggplant, tahini, garlic, spices and olive oil. Served with pita bread. Halal.",
+        "price": 6.5,
+        "halal": true
+      },
+      {
+        "name": "Sigara Borek",
+        "description": "Thin pastry, rolled and stuffed with feta cheese. Lightly fried. Halal.",
+        "price": 6.5,
+        "halal": true
+      },
+      {
+        "name": "Falafel",
+        "description": "Vegetarian patties made with chickpeas and spices. Crispy fried. Served with hummus, ezme salad and pita bread. Vegetarian. Halal.",
+        "price": 7.5,
+        "vegetarian": true,
+        "halal": true
+      },
+      {
+        "name": "Fresh Mozzarella & Tomato",
+        "description": "Fresh mozzarella, sliced red tomatoes and basil with extra virgin olive oil. Halal.",
+        "price": 7.95,
+        "halal": true
+      },
+      {
+        "name": "Mixed Meze Platter",
+        "description": "Hummus, baba ganoush, ezme, sigara borek, falafel, and feta cheese. Served with pita bread. Halal.",
+        "price": 13.25,
+        "halal": true
+      }
+    ],
+    "SOUPS": [
+      {
+        "name": "Lentil Soup",
+        "description": "Vegetarian aromatic red lentil soup. Vegetarian.",
+        "price": 7.25,
+        "vegetarian": true
+      },
+      {
+        "name": "Creamy Tomato Basil Soup",
+        "description": "Creamy vegetarian spiced tomato soup. Vegetarian.",
+        "price": 7.25,
+        "vegetarian": true
+      }
+    ],
+    "GOURMET SALAD": [
+      {
+        "name": "House Salad",
+        "description": "Small version of our garden salad. Halal.",
+        "price": 4.95,
+        "halal": true
+      },
+      {
+        "name": "Ezme Salad",
+        "description": "Chopped tomato, parsley, onions and peppers with olive oil and spices. Served with pita bread. Halal.",
+        "price": 6.5,
+        "halal": true
+      },
+      {
+        "name": "Greek Salad",
+        "description": "Romaine lettuce, red onions, tomatoes, cucumbers, green peppers, topped with feta cheese, capers, dolma and egg.",
+        "price": 9.75
+      },
+      {
+        "name": "Garden Salad",
+        "description": "Romaine lettuce, red onions, tomatoes and sliced cucumber.",
+        "price": 9.5
+      },
+      {
+        "name": "Shepherd Salad",
+        "description": "Chopped tomato, cucumber, red onions, green peppers and parsley on a bed of romaine lettuce with lemon.",
+        "price": 9.75
+      },
+      {
+        "name": "Baby Spinach Salad",
+        "description": "Baby spinach, avocado, goat cheese, cucumbers, tomatoes and walnuts.",
+        "price": 9.75
+      },
+      {
+        "name": "Caesar Salad",
+        "description": "Romaine lettuce, garlic croutons, cucumber, and tomatoes with Parmesan cheese.",
+        "price": 9.5
+      },
+      {
+        "name": "Mixed Green Salad",
+        "description": "Walnuts, cranberries, tomatoes, cucumbers on a bed of spinach and romaine lettuce.",
+        "price": 9.5
+      },
+      {
+        "name": "Mediterranean Salad",
+        "description": "Romaine lettuce, red onions, pepperoncini, cucumbers, tomatoes, feta cheese, walnuts and Kalamata olives.",
+        "price": 9.75
+      },
+      {
+        "name": "Chopped Salad",
+        "description": "Romaine lettuce, tomatoes, cucumbers, cranberry raisins and sliced almonds.",
+        "price": 9.5
+      }
+    ],
+    "WINGS": [
+      {
+        "name": "Wings",
+        "description": "Served with choice of dressing.",
+        "price": 12.75
+      }
+    ],
+    "EXTRAS": [
+      {
+        "name": "Cheese",
+        "price": 1.5
+      },
+      {
+        "name": "Extra Meat",
+        "price": 3.5
+      },
+      {
+        "name": "Extra Dressing",
+        "price": 0.75
+      },
+      {
+        "name": "Tzatziki Sauce",
+        "price": 0.75
+      },
+      {
+        "name": "Vegetables",
+        "price": 1.5
+      },
+      {
+        "name": "Pita Bread",
+        "price": 1.5
+      }
+    ],
+    "PIDE": [
+      {
+        "name": "Kashkaval Pide",
+        "description": "Extra mozzarella cheese. Vegetarian.",
+        "price": 13.5,
+        "vegetarian": true
+      },
+      {
+        "name": "Ground Beef Pide",
+        "description": "Mix of ground beef, tomatoes, red pepper, parsley and onion.",
+        "price": 13.5
+      },
+      {
+        "name": "Feta Pide",
+        "description": "Feta, mozzarella and Kalamata olives. Vegetarian.",
+        "price": 14.5,
+        "vegetarian": true
+      },
+      {
+        "name": "Spinach Pide",
+        "description": "Sauteed spinach, red pepper, onions, feta cheese and mozzarella cheese.",
+        "price": 14.5,
+        "vegetarian": true
+      },
+      {
+        "name": "Eggplant Pide",
+        "description": "Grilled eggplant cubes, red pepper, onion and mozzarella cheese.",
+        "price": 14.5
+      },
+      {
+        "name": "Sujuk Pide",
+        "description": "Slices of mild spiced Turkish sausage and mozzarella cheese.",
+        "price": 14.5
+      },
+      {
+        "name": "Meat Lovers Pide",
+        "description": "Ground beef, Turkish sujuk sausage, feta cheese and mozzarella cheese.",
+        "price": 14.5
+      },
+      {
+        "name": "Chicken Pide",
+        "description": "Grilled chicken breast and mozzarella cheese.",
+        "price": 14.5
+      }
+    ],
+    "SUBS": [
+      {
+        "name": "Chicken Parmigiano Sub",
+        "description": "With marinara and mozzarella.",
+        "price": 10.75
+      },
+      {
+        "name": "Meatballs Parmigiano Sub",
+        "description": "With marinara and mozzarella.",
+        "price": 10.75
+      },
+      {
+        "name": "Eggplant Parmigiano Sub",
+        "description": "With marinara and mozzarella.",
+        "price": 10.75
+      },
+      {
+        "name": "Steak & Cheese Sub",
+        "description": "Chopped steak with grilled onion, lettuce, tomato, mayo, and a mozzarella cheddar blend.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken & Cheese Sub",
+        "description": "Chicken gyro with red onion, lettuce, tomato, mayo, and a mozzarella cheddar blend.",
+        "price": 10.75
+      },
+      {
+        "name": "Grilled Chicken Breast Sub",
+        "description": "With lettuce, tomato, red onion, and mayo.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Gyro Sub",
+        "description": "With lettuce, tomato, red onion, and mayo.",
+        "price": 10.75
+      },
+      {
+        "name": "Doner Sub",
+        "description": "Shawarma. With lettuce, tomato, red onion.",
+        "price": 10.75
+      }
+    ],
+    "SANDWICHES": [
+      {
+        "name": "Sujuk Sandwich",
+        "description": "Grilled, mildly spiced Turkish sausage, tomatoes, lettuce, tomato, red onion and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Mediterranean Sandwich",
+        "description": "Grilled chicken breast, lettuce, tomato, red onion, black olive, mayo and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Kofte Sandwich",
+        "description": "Spiced and grilled ground beef and lamb, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Falafel Sandwich",
+        "description": "Seasoned, crispy fried vegetarian chickpea patties, ezme, hummus, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Veggie Hummus Sandwich",
+        "description": "Chicken gyro with hummus, lettuce, tomato, red onion, cucumber, feta cheese and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Gyro Sandwich",
+        "description": "Marinated slices of chicken breast, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Hummus Veggie Sandwich",
+        "description": "Hummus, cucumber, lettuce, tomato, red onion, feta cheese and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Adana Kabob Sandwich",
+        "description": "Marinated ground lamb, skewered and grilled with lettuce, tomato, red onions and ezme salad.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Kebab Sandwich",
+        "description": "Grilled marinated chicken breast with lettuce, tomatoes, and red onions.",
+        "price": 10.75
+      },
+      {
+        "name": "Doner Sandwich",
+        "description": "Shawarma. Thin sliced marinated lamb and beef cooked on a vertical spit with lettuce, tomato, and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Veggie Sandwich",
+        "description": "Green pepper, red pepper, red onion, lettuce, cucumbers, tomato with feta cheese. Vegetarian.",
+        "price": 10.75
+      }
+    ],
+    "WRAPS": [
+      {
+        "name": "Sujuk Wrap",
+        "description": "Grilled mildly spiced Turkish sausage, lettuce, tomato, red onion and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Mediterranean Wrap",
+        "description": "Grilled chicken breast, lettuce, tomato, red onion, black olive, mayo and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Kofte Wrap",
+        "description": "Spiced and grilled ground beef and lamb, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Falafel Wrap",
+        "description": "Seasoned, crispy fried vegetarian chickpea patties, ezme, hummus, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Veggie Hummus Wrap",
+        "description": "Chicken gyro with hummus, lettuce, tomato, red onion, cucumber, feta cheese and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Gyro Wrap",
+        "description": "Marinated slices of chicken breast, lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Hummus Veggie Wrap",
+        "description": "Hummus, cucumber, lettuce, tomato, red onion, feta cheese and mozzarella cheese.",
+        "price": 10.75
+      },
+      {
+        "name": "Adana Kabob Wrap",
+        "description": "Marinated ground lamb, skewered and grilled with lettuce, tomato, red onions and ezme salad.",
+        "price": 10.75
+      },
+      {
+        "name": "Chicken Kebab Wrap",
+        "description": "Grilled marinated chicken breast with lettuce, tomatoes and red onions.",
+        "price": 10.75
+      },
+      {
+        "name": "Doner Wrap",
+        "description": "Shawarma. Thin sliced marinated lamb and beef cooked on a vertical spit with lettuce, tomato and red onion.",
+        "price": 10.75
+      },
+      {
+        "name": "Veggie Wrap",
+        "description": "Green pepper, red pepper, red onion, lettuce, cucumbers, tomato with feta cheese. Vegetarian.",
+        "price": 10.75
+      }
+    ],
+    "LAHMACUN": [
+      {
+        "name": "Lahmacun",
+        "description": "Taco Europe. Seasoned ground beef, tomatoes, red pepper, parsley and onion baked on thin home-made dough, served with lettuce, tomato, red onions and lemon. Stuffed dough dish.",
+        "price": 10.95
+      }
+    ],
+    "PASTA": [
+      {
+        "name": "Pasta with Marinara Sauce",
+        "description": "Pasta tossed in our homemade marinara sauce.",
+        "price": 11.95
+      },
+      {
+        "name": "Pasta with Butter Garlic",
+        "price": 11.95
+      },
+      {
+        "name": "Pasta with Alfredo Sauce",
+        "description": "Pasta cooked al dente and tossed in our creamy homemade alfredo sauce.",
+        "price": 12.95
+      },
+      {
+        "name": "Pasta with Pesto Sauce",
+        "price": 12.95
+      },
+      {
+        "name": "Pasta Primavera Vegetable",
+        "price": 12.95
+      },
+      {
+        "name": "Pasta with Meatballs",
+        "description": "Pasta topped in our homemade meatballs.",
+        "price": 13.95
+      },
+      {
+        "name": "Pasta with Meat Sauce",
+        "description": "Pasta tossed in our homemade meat sauce.",
+        "price": 13.95
+      },
+      {
+        "name": "Pasta Bolognese",
+        "description": "Pasta tossed in bolognese sauce.",
+        "price": 13.95
+      }
+    ],
+    "PASTA ENTREES": [
+      {
+        "name": "Eggplant Parmigiana Pasta",
+        "description": "Breaded eggplant slices with marinara and mozzarella cheese, served over spaghetti.",
+        "price": 13.95
+      },
+      {
+        "name": "Chicken Parmigiana Pasta",
+        "description": "Three breaded chicken fillets with marinara and mozzarella cheese, served over spaghetti.",
+        "price": 14.95
+      },
+      {
+        "name": "Chicken Eggplant Parmigiana Pasta",
+        "description": "Breaded chicken fillet and eggplant slices with marinara and mozzarella cheese, served over spaghetti.",
+        "price": 14.95
+      },
+      {
+        "name": "Chicken a la Marinara Sauce Pasta",
+        "description": "Fresh grilled chicken in a creamy cheesy tomato sauce, served over spaghetti.",
+        "price": 15.25
+      },
+      {
+        "name": "Chicken Tetrazzini Pasta",
+        "description": "Fresh grilled chicken and sweet red peppers sauteed with garlic in a cream sauce over spaghetti.",
+        "price": 15.25
+      }
+    ],
+    "KEBAB ENTREES": [
+      {
+        "name": "Adana Kebab",
+        "description": "Marinated ground lamb, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
+        "price": 17.95
+      },
+      {
+        "name": "Kofte Kebab",
+        "description": "Spiced and grilled ground beef and lamb. Served with rice and tomato onion and hot pepper. Halal.",
+        "price": 17.95
+      },
+      {
+        "name": "Chicken Shish Kebab",
+        "description": "Marinated chunks of chicken breast, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
+        "price": 17.95
+      },
+      {
+        "name": "Doner Kebab",
+        "description": "Shawarma. Thin sliced, marinated lamb and beef cooked on a vertical spit. Served with rice and tomato, onion and hot pepper. Halal.",
+        "price": 18.95
+      },
+      {
+        "name": "Iskender Kebab",
+        "description": "Thin sliced marinated lamb and beef cooked on a vertical spit smothered in a fresh tomato sauce with yogurt on the side. Halal.",
+        "price": 18.95
+      },
+      {
+        "name": "Yogurtlu Kebab",
+        "description": "Grilled fillet mignon over toasted pita, smothered in a fresh tomato sauce with yogurt on the side. Halal.",
+        "price": 20.5
+      },
+      {
+        "name": "Lamb Shish Kebab",
+        "description": "Chunks of lamb, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
+        "price": 20.5
+      },
+      {
+        "name": "Coban Kavurma",
+        "description": "Marinated chunks of beef sauteed with tomato, green pepper, onion, herbs. Served with rice. Halal.",
+        "price": 20.5
+      },
+      {
+        "name": "Beef Shish Kebab",
+        "description": "Chunks of filet mignon, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
+        "price": 20.5
+      },
+      {
+        "name": "Chef Special",
+        "description": "A combination of Adana kebab, kofte kebab, chicken shish kebab and doner kebab. Served with basmati rice and tomato, onion, and hot pepper. Halal.",
+        "price": 21.95
+      },
+      {
+        "name": "Aden Mixed Kebabs",
+        "description": "A combination of Adana kebab, chicken shish kebab, beef shish kebab, kofta kebab, and doner kebab. Served with basmati rice and tomato, onion and hot pepper. Halal.",
+        "price": 23.95
+      }
+    ],
+    "DESSERTS": [
+      {
+        "name": "Baklava",
+        "description": "Filo dough, walnuts, pistachios and honey sugar syrup.",
+        "price": 4.25
+      },
+      {
+        "name": "Kazandibi",
+        "description": "Turkish style flan custard with cinnamon.",
+        "price": 4.25
+      },
+      {
+        "name": "Cheesecake",
+        "description": "Creamy cheesecake on a graham cracker crust.",
+        "price": 4.25
+      },
+      {
+        "name": "Chocolate Cake",
+        "description": "Flourless, gluten-free cake.",
+        "price": 4.25
+      }
+    ],
+    "BEVERAGES": [
+      {
+        "name": "Soda",
+        "price": 1.39
+      },
+      {
+        "name": "Brisk Iced Tea",
+        "price": 1.39
+      },
+      {
+        "name": "Water",
+        "price": 1.69
+      },
+      {
+        "name": "Gatorade",
+        "price": 2.75
+      },
+      {
+        "name": "Ayran",
+        "description": "Cold yogurt drink.",
+        "price": 3.5
+      }
+    ]
+  }
+}

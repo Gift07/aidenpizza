@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import StoreProvider from "./StoreProvider";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +17,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bricolage">{children}</body>
+      <body className="bricolage">
+        <StoreProvider>
+          <Toaster position="top-center" reverseOrder={false} />
+          <div className="w-full">{children}</div>
+        </StoreProvider>
+      </body>
     </html>
   );
 }

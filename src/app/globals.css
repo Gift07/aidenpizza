@@ -9,3 +9,29 @@ body {
 .bricolage {
   font-family: "Bricolage Grotesque", sans-serif;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: green !important;
+  padding: 10px !important;
+  background-color: blue !important;
+  text-size: 10px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 0, 0, 0.5);
+}
