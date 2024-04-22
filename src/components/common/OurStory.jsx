@@ -3,7 +3,7 @@ import React from "react";
 
 const OurStory = () => {
   return (
-    <div className="w-full relative ">
+    <div className="w-full relative py-10">
       <div className="absolute left-0 top-10">
         <Image
           src={"/black-jamun.png"}
@@ -13,7 +13,7 @@ const OurStory = () => {
           className="w-36 h-72"
         />
       </div>
-      <div className="absolute right-[500px] top-0 ">
+      <div className="absolute right-2 top-0 ">
         <Image
           src={"/onion.png"}
           alt="header"
@@ -24,13 +24,14 @@ const OurStory = () => {
         />
       </div>
       <div className="w-full flex items-center justify-center py-6">
-        <div className="w-[80%] flex items-center justify-between h-[600px]">
+        <div className="w-full px-10 flex items-center justify-between ">
           <div className="w-full h-full">
             <Image
               src={"/our-story.png"}
               alt="header"
               height={800}
               width={800}
+              className="float"
               style={{ objectFit: "contain" }}
             />
           </div>
@@ -39,11 +40,11 @@ const OurStory = () => {
               <div className="flex text-2xl font-semibold items-center text-primary">
                 Our Story <hr className="w-24 h-1 bg-primary" />
               </div>
-              <h1 className="text-3xl font-semibold py-2">
+              <h1 className="text-3xl font-semibold py-2 Coolvetica">
                 The Pizzon Has Excellent
                 <br /> Of Quality Foods
               </h1>
-              <p className="max-w-xl py-3">
+              <p className="max-w-xl py-3 text-black/70 text-sm">
                 {`  Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -52,7 +53,7 @@ const OurStory = () => {
             remaining essentially unchanged.`}
               </p>
               <div>
-                <button className="bg-secondary w-56 h-14 rounded-full flex items-center justify-center text-white text-xl">
+                <button className="bg-secondary px-10 py-2 rounded-lg flex items-center justify-center text-white ">
                   Read More
                 </button>
               </div>
