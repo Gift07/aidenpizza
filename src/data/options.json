@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Small 10\"",
+    "price": 14.95
+  },
+  {
+    "id": 2,
+    "name": "Medium 12\"",
+    "price": 18.75
+  },
+  {
+    "id": 3,
+    "name": "Large 14\"",
+    "price": 20.95
+  },
+  {
+    "id": 4,
+    "name": "X-Large 16\"",
+    "price": 22.95
+  }
+]
