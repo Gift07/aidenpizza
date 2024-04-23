@@ -37,8 +37,8 @@ const PizzaListings = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-36">
-      <div className="w-[80%] flex items-center justify-between relative">
+    <div className="w-full flex flex-col items-center justify-center  bg-[#fffaed] py-8">
+      <div className="w-full flex items-end justify-between relative px-10">
         <div>
           <div className="flex text-2xl font-semibold items-center text-primary">
             Popular dishes <hr className="w-24 h-1 bg-primary" />
@@ -49,27 +49,17 @@ const PizzaListings = () => {
           onClick={() => {
             router.push("/menu");
           }}
-          className="flex items-center gap-x-2 text-secondary  duration-200 text-xl cursor-pointer"
+          className="flex items-center gap-x-2 text-secondary  duration-200  cursor-pointer "
         >
           See all
-          <IoChevronForwardSharp />
-        </div>
-        <div className="absolute right-0 -top-24">
-          <Image
-            src="/tamato.png"
-            alt="header"
-            height={100}
-            width={100}
-            style={{ objectFit: "contain" }}
-            className="transform transition-transform hover:-rotate-90"
-          />
+          <GoArrowRight />
         </div>
       </div>
-      <div className="w-[80%] flex items-center gap-x-4 py-12">
+      <div className="w-full px-10  flex items-center gap-x-4 py-2 relative">
         <div>
           {/* Custom navigation buttons */}
           <button
-            className="bg-secondary text-white p-3 rounded-full text-2xl"
+            className="bg-secondary absolute z-10 text-white p-3 rounded-full text-2xl"
             ref={prevRef}
           >
             <GoArrowLeft />
@@ -82,7 +72,7 @@ const PizzaListings = () => {
             <Swiper
               // ref={swiperRef} // Assign ref to the Swiper component
               modules={[Navigation]}
-              spaceBetween={16}
+              spaceBetween={8}
               slidesPerView={4}
               navigation={{
                 prevEl: prevRef.current,
@@ -90,12 +80,12 @@ const PizzaListings = () => {
               }}
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
-              className="w-full flex items-center gap-x-4 pt-20"
+              className="w-full flex items-center gap-x-4 "
             >
               {menus.map((menu, index) => (
                 <SwiperSlide
                   key={index}
-                  className="border border-primary/40 rounded-xl w-full py-6"
+                  className="border border-primary/40 rounded-xl w-full py-4 text-sm"
                 >
                   <div className="w-full flex items-center justify-center">
                     <Image
@@ -109,7 +99,9 @@ const PizzaListings = () => {
                   </div>
                   <div className="w-full px-4">
                     <div className="w-full flex items-center justify-between py-2">
-                      <h1 className="text-xl font-semibold">{menu.name}</h1>
+                      <h1 className="text-xl font-semibold Coolvetica truncate">
+                        {menu.name}
+                      </h1>
                       <h1 className="text-xl font-semibold text-primary">
                         ${menu.price}
                       </h1>
@@ -130,7 +122,7 @@ const PizzaListings = () => {
                         onClick={() => {
                           dispatch(addItemToCart(menu));
                         }}
-                        className="bg-secondary w-56 h-14 rounded-full flex items-center justify-center text-white text-xl"
+                        className="bg-secondary gap-x-2 py-2 w-full rounded-lg flex items-center justify-center text-white"
                       >
                         <FaCartShopping /> order now
                       </button>
@@ -144,7 +136,7 @@ const PizzaListings = () => {
 
         <div>
           <button
-            className="bg-secondary text-white p-3 rounded-full text-2xl"
+            className=" absolute right-5 z-10 bg-secondary text-white p-3 rounded-full text-2xl"
             ref={nextRef}
           >
             <GoArrowRight />
