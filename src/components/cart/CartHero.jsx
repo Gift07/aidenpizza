@@ -11,11 +11,11 @@ function CartHeroComponent() {
   const { cartTotalItems } = useSelector((state) => state.cart);
 
   return (
-    <div className="w-full bg-bgyellow relative h-[200px]">
-      <div className="absolute left-0 top-10">
+    <div className="w-full bg-bgyellow relative h-[70px] lg:h-[250px]">
+      <div className="absolute left-0 top-10 hidden lg:flex">
         <Image src={"/black-jamun.png"} alt="header" height={100} width={100} />
       </div>
-      <div className="absolute right-0 bottom-0 ">
+      <div className="absolute left-[500px] top-10 hidden lg:flex">
         <Image
           src={"/onion.png"}
           alt="header"
@@ -24,8 +24,8 @@ function CartHeroComponent() {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <div className="w-full flex items-center justify-center">
-        <div className="w-[80%] flex flex-col justify-center pt-3">
+      <div className="w-full flex items-center justify-center px-4 lg:px-0">
+        <div className="w-full lg:w-[80%] flex lg:flex-col flex-row items-center justify-between lg:items-start lg:justify-center pt-3">
           <div className="w-full flex items-center justify-between py-3">
             <div
               onClick={() => {
@@ -36,8 +36,9 @@ function CartHeroComponent() {
               <IoMdArrowBack />
             </div>
           </div>
-          <div className="flex text-2xl font-semibold items-center text-primary">
-            {cartTotalItems} Cart Items <hr className="w-24 h-1 bg-primary" />
+          <div className="flex text-md lg:text-2xl font-semibold items-center text-primary px-4 lg:px-0 text-nowrap">
+            {cartTotalItems} Cart Items{" "}
+            <hr className="w-24 h-1 bg-primary hidden lg:flex" />
           </div>
         </div>
       </div>

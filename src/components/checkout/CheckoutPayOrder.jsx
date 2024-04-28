@@ -99,8 +99,10 @@ const CheckoutPayOrder = () => {
   };
 
   return (
-    <div className="w-full bg-bgyellow h-96 border border-secondary/20 p-4">
-      <h1 className="text-2xl py-2">Pay Order</h1>
+    <div className="w-full bg-bgyellow h-auto lg:h-96 border border-secondary/20 p-4">
+      <h1 className="text-xl font-bold lg:text-3xl lg:font-medium">
+        Pay Order
+      </h1>
       <hr />
       <div>
         <div className="w-full flex items-center justify-between py-2 text-lg">

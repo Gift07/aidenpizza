@@ -7,15 +7,15 @@ import { useSelector } from "react-redux";
 
 const CartShopping = () => {
   const { cartItems, cartTotalPrice } = useSelector((state) => state.cart);
-  console.log("cartItems", cartTotalPrice);
+
   return (
-    <div className="w-full flex items-center justify-center py-3">
-      <div className="w-[80%] flex items-start">
-        <div className="w-full">
+    <div className="w-full h-full flex items-center justify-center py-0 lg:py-3">
+      <div className="w-full lg:w-[80%] flex  flex-col lg:flex-row items-start h-full ">
+        <div className="w-full lg:h-auto h-[calc(100vh-260px)]">
           <CartTable cartItems={cartItems} />
         </div>
-        <div className="w-1/3">
-          <CartCheckout />
+        <div className="w-full lg:w-1/3">
+          <CartCheckout cartPrice={cartTotalPrice} />
         </div>
       </div>
     </div>

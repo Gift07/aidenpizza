@@ -4,17 +4,17 @@ import React from "react";
 function Reservations() {
   return (
     <div className="w-full relative">
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full flex items-center justify-center">
-          <div className="w-full pl-40">
-            <div className="w-full flex text-2xl font-semibold items-center text-primary">
+          <div className="w-full px-4 lg:px-0 lg:pl-40">
+            <div className="w-full flex text-xl lg:text-2xl font-semibold items-center text-primary">
               Reservations <hr className="w-24 h-1 bg-primary" />
             </div>
-            <h1 className="text-3xl font-semibold py-2 Coolvetica">
+            <h1 className="text-2xl lg:text-3xl font-semibold py-2 Coolvetica">
               Book a Table Now
             </h1>
-            <div className="w-[80%] border border-black/10 rounded-lg bg-black/5 px-3 py-5">
-              <div className="w-full flex items-center gap-x-3 ">
+            <div className="w-full lg:w-[80%] border border-black/10 rounded-lg bg-black/5 px-3 py-5">
+              <div className="w-full flex flex-col lg:flex-row items-center gap-x-3 ">
                 <div className="mb-3 w-full">
                   <label
                     for="base-input"
@@ -44,7 +44,7 @@ function Reservations() {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-x-3">
+              <div className="flex flex-col lg:flex-row items-center gap-x-3">
                 <div className="mb-3 w-full">
                   <label
                     for="base-input"
@@ -74,7 +74,7 @@ function Reservations() {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-x-3">
+              <div className="flex flex-col lg:flex-row items-center gap-x-3">
                 <div className="mb-3 w-full">
                   <label
                     for="base-input"

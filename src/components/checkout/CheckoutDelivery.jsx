@@ -4,17 +4,19 @@ import CheckoutPayOrder from "./CheckoutPayOrder";
 const CheckoutDelivery = () => {
   return (
     <div className="w-full flex items-center justify-center py-3">
-      <div className="w-[80%] flex items-start gap-x-10">
+      <div className="w-full lg:w-[80%] flex flex-col lg:flex-rowitems-start lg:gap-x-10 px-4 lg:px-0">
         <div className="w-full">
           <div>
-            <h1 className="text-3xl font-medium">Add Billing Address</h1>
+            <h1 className="text-xl font-bold lg:text-3xl lg:font-medium">
+              Add Billing Address
+            </h1>
           </div>
-          <div className="w-full">
-            <div className="w-full flex items-center gap-x-3">
+          <div className="w-full lg:w-[80%] border border-black/10 rounded-lg bg-black/5 px-3 py-5">
+            <div className="w-full flex flex-col lg:flex-row items-center gap-x-3 ">
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block  text-sm font-medium text-black/70"
                 >
                   Base input
                 </label>
@@ -28,9 +30,9 @@ const CheckoutDelivery = () => {
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block text-sm font-medium text-black/70 "
                 >
-                  Base input
+                  Base inputs
                 </label>
                 <input
                   type="text"
@@ -40,11 +42,11 @@ const CheckoutDelivery = () => {
                 />
               </div>
             </div>
-            <div className="flex items-center gap-x-3">
+            <div className="flex flex-col lg:flex-row items-center gap-x-3">
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block text-sm font-medium text-black/70"
                 >
                   Base input
                 </label>
@@ -58,7 +60,7 @@ const CheckoutDelivery = () => {
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block text-sm font-medium text-black/70"
                 >
                   Base input
                 </label>
@@ -70,11 +72,11 @@ const CheckoutDelivery = () => {
                 />
               </div>
             </div>
-            <div className="flex items-center gap-x-3">
+            <div className="flex flex-col lg:flex-row items-center gap-x-3">
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block text-sm font-medium text-black/70"
                 >
                   Base input
                 </label>
@@ -88,7 +90,7 @@ const CheckoutDelivery = () => {
               <div className="mb-3 w-full">
                 <label
                   for="base-input"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class="block text-sm font-medium text-black/70"
                 >
                   Base input
                 </label>
@@ -100,11 +102,16 @@ const CheckoutDelivery = () => {
                 />
               </div>
             </div>
+            <button className="bg-secondary  w-full py-2 rounded-lg flex items-center justify-center text-white ">
+              Book Now
+            </button>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="w-full lg:w-1/3">
           <div>
-            <h1 className="text-3xl font-medium pb-6">Your Order</h1>
+            <h1 className="text-xl font-bold lg:text-3xl lg:font-medium py-3">
+              Your Order
+            </h1>
           </div>
           <div>
             <CheckoutPayOrder />

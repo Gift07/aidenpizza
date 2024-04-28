@@ -38,7 +38,6 @@ const AllItems = () => {
     };
     getPizza();
   }, []);
-  console.log(menus);
   return (
     <div className="relative">
       {loading ? (
@@ -46,13 +45,13 @@ const AllItems = () => {
           Loading...
         </div>
       ) : (
-        <div className="w-full flex flex-col items-center justify-center py-16">
-          <div className="w-full pl-44">
+        <div className="w-full flex flex-col items-center justify-center py-8 lg:py-16">
+          <div className="w-full px-4  lg:px-20">
             <div className="flex text-2xl font-semibold items-center text-primary">
               All Items <hr className="w-24 h-1 bg-primary" />
             </div>
           </div>
-          <div className="w-[80%]">
+          <div className="w-full px-4 lg:px-20">
             {tabs.map((tab, i) => {
               const items = isEmpty(menus) ? [] : menus[tab];
               return (

@@ -37,13 +37,15 @@ const PizzaListings = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center  bg-[#fffaed] py-8">
-      <div className="w-full flex items-end justify-between relative px-10">
+    <div className="w-screen flex flex-col items-center justify-center  bg-[#fffaed] py-8">
+      <div className="w-full flex items-end justify-between relative px-4 lg:px-20">
         <div>
-          <div className="flex text-2xl font-semibold items-center text-primary">
+          <div className="flex text-xl lg:text-2xl font-semibold items-center text-primary">
             Popular dishes <hr className="w-24 h-1 bg-primary" />
           </div>
-          <div className="text-3xl font-semibold py-2">Browse Our Menu</div>
+          <div className=" text-2xl lg:text-3xl font-semibold py-2">
+            Browse Our Menu
+          </div>
         </div>
         <div
           onClick={() => {
@@ -55,7 +57,7 @@ const PizzaListings = () => {
           <GoArrowRight />
         </div>
       </div>
-      <div className="w-full px-10  flex items-center gap-x-4 py-2 relative">
+      <div className="w-full lg:px-20  flex items-center lg:gap-x-6 py-2 relative">
         <div>
           {/* Custom navigation buttons */}
           <button
@@ -65,7 +67,7 @@ const PizzaListings = () => {
             <GoArrowLeft />
           </button>
         </div>
-        <div className="w-full flex items-center">
+        <div className="w-full items-center hidden lg:flex">
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -93,6 +95,75 @@ const PizzaListings = () => {
                       alt="header"
                       height={200}
                       width={200}
+                      style={{ objectFit: "contain" }}
+                      className="transform transition-transform hover:-rotate-90"
+                    />
+                  </div>
+                  <div className="w-full px-4">
+                    <div className="w-full flex items-center justify-between py-2">
+                      <h1 className="text-xl font-semibold Coolvetica truncate">
+                        {menu.name}
+                      </h1>
+                      <h1 className="text-xl font-semibold text-primary">
+                        ${menu.price}
+                      </h1>
+                    </div>
+                    <div className="flex items-center gap-x-1 text-xl">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <div key={i} className="text-secondary">
+                          <MdStar />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="py-2">
+                      Officia sunt est veniam quis consequat laborum culpa
+                      aliquip mollit excepteur mollit cillum.
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => {
+                          dispatch(addItemToCart(menu));
+                        }}
+                        className="bg-secondary gap-x-2 py-2 w-full rounded-lg flex items-center justify-center text-white"
+                      >
+                        <FaCartShopping /> order now
+                      </button>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </div>
+
+        <div className="w-full  lg:hidden flex items-center justify-center">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <Swiper
+              // ref={swiperRef} // Assign ref to the Swiper component
+              modules={[Navigation]}
+              spaceBetween={6}
+              slidesPerView={1}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              className="w-[80%] flex items-center justify-center"
+            >
+              {menus.map((menu, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="border border-primary/40 rounded-xl  py-4 text-sm"
+                >
+                  <div className="w-full flex items-center justify-center">
+                    <Image
+                      src={"/pizza-2.png"}
+                      alt="header"
+                      height={100}
+                      width={100}
                       style={{ objectFit: "contain" }}
                       className="transform transition-transform hover:-rotate-90"
                     />

@@ -6,9 +6,9 @@ import { AiFillInstagram } from "react-icons/ai";
 const FooterComponent = () => {
   return (
     <div className="w-full bg-bgyellow">
-      <div className="w-full flex items-center justify-center py-16">
-        <div className="w-[80%] flex items-center justify-between">
-          <div className="w-full flex gap-x-32">
+      <div className="w-full flex items-center justify-center py-16 px-4 lg:px-0">
+        <div className="w-full lg:w-[80%] flex flex-col lg:flex-row items-center justify-between">
+          <div className="w-full flex flex-col lg:flex-row gap-x-32">
             <div className="w-24 h-14 border border-primary rounded-l-full rounded-r-full flex items-center justify-center bg-gray-100">
               <Image
                 src={"/aden.avif"}
@@ -37,7 +37,7 @@ const FooterComponent = () => {
               </ul>
             </div>
           </div>
-          <div className="w-96 ">
+          <div className="w-96 px-4 lg:px-0">
             <div>
               <div>
                 <h1 className="text-2xl">SOCIAL MEDIA</h1>

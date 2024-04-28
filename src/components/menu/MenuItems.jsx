@@ -1,104 +1,72 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdStar } from "react-icons/md";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "@/redux/features/cartSlices";
+import { isEmpty } from "lodash";
 
 const MenuItems = ({ menus }) => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
   const dispatch = useDispatch();
 
   return (
-    <div className="w-full flex items-center gap-x-4 ">
-      <div>
-        {/* Custom navigation buttons */}
-        <button
-          className="bg-secondary text-white p-3 rounded-full text-2xl"
-          ref={prevRef}
-        >
-          <GoArrowLeft />
-        </button>
-      </div>
-      <div className="w-full flex items-center">
-        <Swiper
-          // ref={swiperRef} // Assign ref to the Swiper component
-          modules={[Navigation]}
-          spaceBetween={16}
-          slidesPerView={4}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          className="w-full flex items-center gap-x-4 pt-20"
-        >
-          {menus.map((menu, i) => (
-            <SwiperSlide
-              key={i}
-              className="border border-primary/40 rounded-xl w-full py-6"
-            >
-              <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center gap-x-4">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 place-items-center gap-6">
+        {menus.map((menu, i) => (
+          <div
+            key={i}
+            className="border border-primary/40 rounded-xl w-full  flex items-center h-44"
+          >
+            <div className="w-full px-2">
+              <div className="w-full flex items-center justify-between py-1">
+                <h1 className="text-md lg:text-lg font-semibold">
+                  {menu.name}
+                </h1>
+              </div>
+              <div className="flex items-center gap-x-1 text-xs lg:text-xl">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <div key={i} className="text-secondary">
+                    <MdStar />
+                  </div>
+                ))}
+              </div>
+              <div className="py-2 text-sm">{menu.description}</div>
+              <div className="w-full">
+                <h1 className="text-lg font-semibold text-primary">
+                  ${menu.price}
+                </h1>
+              </div>
+              {/* <div>
+                <button
+                  onClick={() => {
+                    dispatch(addItemToCart(menu));
+                  }}
+                  className="bg-secondary w-56 h-14 rounded-full flex items-center justify-center text-white text-xl"
+                >
+                  <FaCartShopping /> order now
+                </button>
+              </div> */}
+            </div>
+            {!isEmpty(menu.imageUrl) && (
+              <div className="w-44 h-full flex items-center justify-center rounded-r-xl">
                 <Image
-                  src={"/pizza-2.png"}
+                  src={`/${menu.imageUrl}`}
                   alt="header"
                   height={200}
                   width={200}
-                  style={{ objectFit: "contain" }}
-                  className="transform transition-transform hover:-rotate-90"
+                  style={{ objectFit: "cover" }}
+                  className="h-full rounded-r-xl"
                 />
               </div>
-              <div className="w-full px-4">
-                <div className="w-full flex items-center justify-between py-2">
-                  <h1 className="text-xl font-semibold">{menu.name}</h1>
-                  <h1 className="text-xl font-semibold text-primary">
-                    ${menu.price}
-                  </h1>
-                </div>
-                <div className="flex items-center gap-x-1 text-xl">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <div key={i} className="text-secondary">
-                      <MdStar />
-                    </div>
-                  ))}
-                </div>
-                <div className="py-2">
-                  Officia sunt est veniam quis consequat laborum culpa aliquip
-                  mollit excepteur mollit cillum.
-                </div>
-                <div>
-                  <button
-                    onClick={() => {
-                      dispatch(addItemToCart(menu));
-                    }}
-                    className="bg-secondary w-56 h-14 rounded-full flex items-center justify-center text-white text-xl"
-                  >
-                    <FaCartShopping /> order now
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <div>
-        <button
-          className="bg-secondary text-white p-3 rounded-full text-2xl"
-          ref={nextRef}
-        >
-          <GoArrowRight />
-        </button>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

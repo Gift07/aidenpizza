@@ -4,7 +4,7 @@ import React from "react";
 
 function CartScreen() {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen fixed lg:relative overflow-hidden lg:overflow-auto">
       <CartHeroComponent />
       <CartShopping />
     </div>

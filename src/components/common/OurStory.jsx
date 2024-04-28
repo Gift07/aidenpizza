@@ -4,7 +4,7 @@ import React from "react";
 const OurStory = () => {
   return (
     <div className="w-full relative py-10">
-      <div className="absolute left-0 top-10">
+      <div className="absolute left-0 top-10 hidden lg:flex">
         <Image
           src={"/black-jamun.png"}
           alt="header"
@@ -13,7 +13,10 @@ const OurStory = () => {
           className="w-36 h-72"
         />
       </div>
-      <div className="absolute right-2 top-0 ">
+      <div className="absolute left-0 top-10 lg:hidden flex">
+        <Image src={"/black-jamun.png"} alt="header" height={60} width={60} />
+      </div>
+      <div className="absolute right-2 top-0 hidden lg:flex">
         <Image
           src={"/onion.png"}
           alt="header"
@@ -23,8 +26,17 @@ const OurStory = () => {
           className="w-36 h-72"
         />
       </div>
+      <div className="absolute right-2 -top-4 lg:hidden flex">
+        <Image
+          src={"/onion.png"}
+          alt="header"
+          height={80}
+          width={80}
+          style={{ objectFit: "contain" }}
+        />
+      </div>
       <div className="w-full flex items-center justify-center py-6">
-        <div className="w-full px-10 flex items-center justify-between ">
+        <div className="w-full px-4 lg:px-10 flex items-center justify-between flex-col lg:flex-row ">
           <div className="w-full h-full">
             <Image
               src={"/our-story.png"}
@@ -35,12 +47,12 @@ const OurStory = () => {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="h-full w-full flex items-center pl-12">
+          <div className="h-full w-full flex items-center lg:pl-12">
             <div>
-              <div className="flex text-2xl font-semibold items-center text-primary">
+              <div className="flex px-xl lg:text-2xl font-semibold items-center text-primary">
                 Our Story <hr className="w-24 h-1 bg-primary" />
               </div>
-              <h1 className="text-3xl font-semibold py-2 Coolvetica">
+              <h1 className="text-2xl lg:text-3xl font-semibold py-2 Coolvetica">
                 The Pizzon Has Excellent
                 <br /> Of Quality Foods
               </h1>
