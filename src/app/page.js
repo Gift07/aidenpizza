@@ -9,6 +9,7 @@ import OwnPizzaModal from "@/components/common/OwnPizzaModal";
 import PizzaListings from "@/components/common/PizzaListings";
 import Reservations from "@/components/common/Reservations";
 import { handleOwnPizzaModal } from "@/redux/features/appSlices";
+import { isEmpty } from "lodash";
 import Image from "next/image";
 import { useEffect } from "react";
 import { FaCartShopping } from "react-icons/fa6";
@@ -44,6 +45,14 @@ export default function Home() {
 }
 
 const Hero = ({ dispatch }) => {
+  const handleCreateOwnPizza = async () => {
+    const res = await fetch("/api/specialmenus?status=own-pizza");
+    const response = await res.json();
+    console.log(response);
+    if (!isEmpty(response.data)) {
+      dispatch(handleOwnPizzaModal({ data: response.data }));
+    }
+  };
   return (
     <div className="w-screen">
       <div className="w-full relative flex items-center text-sm">
@@ -75,9 +84,7 @@ const Hero = ({ dispatch }) => {
 
             <div>
               <button
-                onClick={() => {
-                  dispatch(handleOwnPizzaModal());
-                }}
+                onClick={handleCreateOwnPizza}
                 className="bg-primary lg:bg-secondary w-56 gap-x-2 h-12 rounded-lg border border-yellow-500  flex items-center justify-center text-white text-lg"
               >
                 <FaCartShopping /> Create Own Pizza

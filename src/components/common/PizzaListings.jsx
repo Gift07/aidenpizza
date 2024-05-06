@@ -16,6 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "@/redux/features/cartSlices";
+import { handleOwnPizzaModal } from "@/redux/features/appSlices";
 
 const PizzaListings = () => {
   const [menus, setMenus] = useState([]);
@@ -122,7 +123,7 @@ const PizzaListings = () => {
                     <div>
                       <button
                         onClick={() => {
-                          dispatch(addItemToCart(menu));
+                          dispatch(handleOwnPizzaModal({ data: [menu] }));
                         }}
                         className="bg-secondary gap-x-2 py-2 w-full rounded-lg flex items-center justify-center text-white"
                       >
