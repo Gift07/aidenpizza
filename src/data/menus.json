@@ -15,14 +15,209 @@
         "proteinAddition": []
       }
     ],
-    "Create Your Own": [
+    "OWN PIZZA": [
       {
         "_id": "307848b6-b8b1-4b86-a582-64f0b7a6b1w4",
         "name": "Create Your Own Pizza",
         "description": "Cheese pizza with marinara sauce.",
         "price": 10.95,
-        "imageUrl": "",
-        "additionalToppings": [],
+        "imageUrl": "own-pizza.jpeg",
+        "options": [
+          {
+            "id": 1,
+            "name": "Small 10\"",
+            "price": 10.95
+          },
+          {
+            "id": 2,
+            "name": "Medium 12\"",
+            "price": 12.95
+          },
+          {
+            "id": 3,
+            "name": "Large 14\"",
+            "price": 14.95
+          },
+          {
+            "id": 4,
+            "name": "X-Large 16\"",
+            "price": 16.95
+          }
+        ],
+        "sauces": [
+          {
+            "id": 1,
+            "name": "Garlic Sauce",
+            "price": 0
+          },
+          {
+            "id": 2,
+            "name": "BBQ Sauce",
+            "price": 0
+          },
+          {
+            "id": 3,
+            "name": "Alfeed Sauce",
+            "price": 2
+          },
+          {
+            "id": 4,
+            "name": "Pesto Sauce",
+            "price": 2
+          }
+        ],
+        "additionalToppings": [
+          {
+            "id": 1,
+            "name": "Extra Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 2,
+            "name": "Feta Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 3,
+            "name": "Cheddar Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 4,
+            "name": "Goat Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 5,
+            "name": "Fresh Mozzarella Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 6,
+            "name": "Ricotta Cheese",
+            "price": 1.49
+          },
+          {
+            "id": 7,
+            "name": "Turkey Sausage",
+            "price": 1.49
+          },
+          {
+            "id": 8,
+            "name": "Beef Pepperoni",
+            "price": 1.49
+          },
+          {
+            "id": 9,
+            "name": "Ground Beef",
+            "price": 1.49
+          },
+          {
+            "id": 10,
+            "name": "Beef Meetballs",
+            "price": 1.49
+          },
+          {
+            "id": 11,
+            "name": "Beef Salami",
+            "price": 1.49
+          },
+          {
+            "id": 12,
+            "name": "Grilled Chicken",
+            "price": 1.49
+          },
+          {
+            "id": 13,
+            "name": "Steak",
+            "price": 1.49
+          },
+          {
+            "id": 14,
+            "name": "Basil",
+            "price": 1.49
+          },
+          {
+            "id": 15,
+            "name": "Mushrooms",
+            "price": 1.49
+          },
+          {
+            "id": 16,
+            "name": "Sun Dried Tomatoes",
+            "price": 1.49
+          },
+          {
+            "id": 17,
+            "name": "Rosted Red Peppers",
+            "price": 1.49
+          },
+          {
+            "id": 18,
+            "name": "Fresh Tomatoes",
+            "price": 1.49
+          },
+          {
+            "id": 19,
+            "name": "Portobello Mushrooms",
+            "price": 1.49
+          },
+          {
+            "id": 20,
+            "name": "Black Olives",
+            "price": 1.49
+          },
+          {
+            "id": 21,
+            "name": "Green Peppers",
+            "price": 1.49
+          },
+          {
+            "id": 22,
+            "name": "Kalamata Olives",
+            "price": 1.49
+          },
+          {
+            "id": 23,
+            "name": "Artichokes",
+            "price": 1.49
+          },
+          {
+            "id": 24,
+            "name": "Jelapeno Peppers",
+            "price": 1.49
+          },
+          {
+            "id": 25,
+            "name": "Banana Peppers",
+            "price": 1.49
+          },
+          {
+            "id": 26,
+            "name": "Baby Spinach",
+            "price": 1.49
+          },
+          {
+            "id": 27,
+            "name": "Eggplant",
+            "price": 1.49
+          },
+          {
+            "id": 28,
+            "name": "Red Onions",
+            "price": 1.49
+          },
+          {
+            "id": 29,
+            "name": "Fresh Garlic",
+            "price": 1.49
+          },
+          {
+            "id": 6,
+            "name": "Pineapple",
+            "price": 1.49
+          }
+        ],
         "recommendedDesserts": [],
         "recommendedBeverages": [],
         "recommendedSideAndApps": [],
@@ -3328,6 +3523,13 @@
         "price": 4.95,
         "halal": true,
         "imageUrl": "",
+        "options": [
+          {
+            "id": 1,
+            "name": "Small",
+            "price": 4.95
+          }
+        ],
         "extra": [
           {
             "id": 1,
@@ -3469,6 +3671,13 @@
         "recommendedDesserts": [],
         "recommendedBeverages": [],
         "recommendedSideAndApps": [],
+        "options": [
+          {
+            "id": 1,
+            "name": "Small",
+            "price": 4.95
+          }
+        ],
         "extra": [
           {
             "id": 1,
@@ -3622,7 +3831,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -3908,7 +4117,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -4051,7 +4260,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -4194,7 +4403,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -4480,7 +4689,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -4623,7 +4832,7 @@
             "price": 2.95
           }
         ],
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Salad",
@@ -4747,11 +4956,73 @@
         "description": "Served with choice of dressing.",
         "price": 12.75,
         "imageUrl": "",
+        "options": [
+          {
+            "id": 1,
+            "name": "8 Pieces",
+            "price": 12.75
+          },
+          {
+            "id": 2,
+            "name": "16 Pieces",
+            "price": 25.5
+          },
+          {
+            "id": 3,
+            "name": "20 Pieces",
+            "price": 31.75
+          }
+        ],
+        "type": [
+          {
+            "id": 1,
+            "name": "Plain"
+          },
+          {
+            "id": 2,
+            "name": "Buffalo"
+          },
+          {
+            "id": 3,
+            "name": "BBQ"
+          }
+        ],
+        "extra": [
+          {
+            "id": 1,
+            "name": "Blue Cheese Dressing",
+            "price": 0.75
+          },
+          {
+            "id": 2,
+            "name": "Ranch Dressing",
+            "price": 0.75
+          },
+          {
+            "id": 3,
+            "name": "BBQ Sauce",
+            "price": 0.75
+          },
+          {
+            "id": 4,
+            "name": "Buffalo Sauce",
+            "price": 0.75
+          }
+        ],
         "additionalToppings": [],
         "recommendedDesserts": [],
         "recommendedBeverages": [],
         "recommendedSideAndApps": [],
-        "dressingChoice": [],
+        "dressingChoice": [
+          {
+            "id": 1,
+            "name": "Blue Cheese Dressing"
+          },
+          {
+            "id": 2,
+            "name": "Ranch Dressing"
+          }
+        ],
         "proteinAddition": []
       }
     ],
@@ -4761,6 +5032,13 @@
         "name": "Cheese",
         "price": 1.5,
         "imageUrl": "",
+        "extra": [
+          {
+            "id": 1,
+            "name": "Extra",
+            "price": 1.5
+          }
+        ],
         "additionalToppings": [],
         "recommendedDesserts": [],
         "recommendedBeverages": [],
@@ -4773,6 +5051,13 @@
         "name": "Extra Meat",
         "price": 3.5,
         "imageUrl": "",
+        "extra": [
+          {
+            "id": 1,
+            "name": "Extra",
+            "price": 1.5
+          }
+        ],
         "additionalToppings": [],
         "recommendedDesserts": [],
         "recommendedBeverages": [],
@@ -4893,7 +5178,7 @@
         "price": 13.5,
         "vegetarian": true,
         "imageUrl": "kashkaval-pide.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5064,7 +5349,7 @@
         "description": "Mix of ground beef, tomatoes, red pepper, parsley and onion.",
         "price": 13.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5236,7 +5521,7 @@
         "price": 14.5,
         "vegetarian": true,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5408,7 +5693,7 @@
         "price": 14.5,
         "vegetarian": true,
         "imageUrl": "spinach-pide.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5579,7 +5864,7 @@
         "description": "Grilled eggplant cubes, red pepper, onion and mozzarella cheese.",
         "price": 14.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5750,7 +6035,7 @@
         "description": "Slices of mild spiced Turkish sausage and mozzarella cheese.",
         "price": 14.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -5921,7 +6206,7 @@
         "description": "Ground beef, Turkish sujuk sausage, feta cheese and mozzarella cheese.",
         "price": 14.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -6092,7 +6377,7 @@
         "description": "Grilled chicken breast and mozzarella cheese.",
         "price": 14.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pide",
@@ -6265,7 +6550,7 @@
         "description": "With marinara and mozzarella.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -6436,7 +6721,7 @@
         "description": "With marinara and mozzarella.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -6607,7 +6892,7 @@
         "description": "With marinara and mozzarella.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -6949,7 +7234,7 @@
         "description": "Chicken gyro with red onion, lettuce, tomato, mayo, and a mozzarella cheddar blend.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -7120,7 +7405,7 @@
         "description": "With lettuce, tomato, red onion, and mayo.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -7291,7 +7576,7 @@
         "description": "With lettuce, tomato, red onion, and mayo.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -7462,7 +7747,7 @@
         "description": "Shawarma. With lettuce, tomato, red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sub",
@@ -7635,7 +7920,7 @@
         "description": "Grilled, mildly spiced Turkish sausage, tomatoes, lettuce, tomato, red onion and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -7806,7 +8091,7 @@
         "description": "Grilled chicken breast, lettuce, tomato, red onion, black olive, mayo and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -7977,7 +8262,7 @@
         "description": "Spiced and grilled ground beef and lamb, lettuce, tomato and red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -8148,7 +8433,7 @@
         "description": "Seasoned, crispy fried vegetarian chickpea patties, ezme, hummus, lettuce, tomato and red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -8319,7 +8604,7 @@
         "description": "Chicken gyro with hummus, lettuce, tomato, red onion, cucumber, feta cheese and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -8661,7 +8946,7 @@
         "description": "Hummus, cucumber, lettuce, tomato, red onion, feta cheese and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -8832,7 +9117,7 @@
         "description": "Marinated ground lamb, skewered and grilled with lettuce, tomato, red onions and ezme salad.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -9003,7 +9288,7 @@
         "description": "Grilled marinated chicken breast with lettuce, tomatoes, and red onions.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -9174,7 +9459,7 @@
         "description": "Shawarma. Thin sliced marinated lamb and beef cooked on a vertical spit with lettuce, tomato, and red onion.",
         "price": 10.75,
         "imageUrl": "doner-sandwich.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -9345,7 +9630,7 @@
         "description": "Green pepper, red pepper, red onion, lettuce, cucumbers, tomato with feta cheese. Vegetarian.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Sandwich",
@@ -9518,7 +9803,7 @@
         "description": "Grilled mildly spiced Turkish sausage, lettuce, tomato, red onion and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -9689,7 +9974,7 @@
         "description": "Grilled chicken breast, lettuce, tomato, red onion, black olive, mayo and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -9860,7 +10145,7 @@
         "description": "Spiced and grilled ground beef and lamb, lettuce, tomato and red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -10031,7 +10316,7 @@
         "description": "Seasoned, crispy fried vegetarian chickpea patties, ezme, hummus, lettuce, tomato and red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -10202,7 +10487,7 @@
         "description": "Chicken gyro with hummus, lettuce, tomato, red onion, cucumber, feta cheese and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -10544,7 +10829,7 @@
         "description": "Hummus, cucumber, lettuce, tomato, red onion, feta cheese and mozzarella cheese.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -10715,7 +11000,7 @@
         "description": "Marinated ground lamb, skewered and grilled with lettuce, tomato, red onions and ezme salad.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -10886,7 +11171,7 @@
         "description": "Grilled marinated chicken breast with lettuce, tomatoes and red onions.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -11057,7 +11342,7 @@
         "description": "Shawarma. Thin sliced marinated lamb and beef cooked on a vertical spit with lettuce, tomato and red onion.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -11228,7 +11513,7 @@
         "description": "Green pepper, red pepper, red onion, lettuce, cucumbers, tomato with feta cheese. Vegetarian.",
         "price": 10.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Wrap",
@@ -11401,7 +11686,7 @@
         "description": "Taco Europe. Seasoned ground beef, tomatoes, red pepper, parsley and onion baked on thin home-made dough, served with lettuce, tomato, red onions and lemon. Stuffed dough dish.",
         "price": 10.95,
         "imageUrl": "lahmacun.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "12\"",
@@ -11423,14 +11708,14 @@
         "description": "Pasta tossed in our homemade marinara sauce.",
         "price": 11.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 11.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11474,14 +11759,14 @@
         "description": "",
         "price": 11.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 11.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11525,14 +11810,14 @@
         "description": "Pasta cooked al dente and tossed in our creamy homemade alfredo sauce.",
         "price": 12.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 12.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11576,14 +11861,14 @@
         "description": "",
         "price": 12.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 12.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11626,14 +11911,14 @@
         "name": "Pasta Primavera Vegetable",
         "description": "",
         "price": 12.95,
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 12.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11678,14 +11963,14 @@
         "description": "Pasta topped in our homemade meatballs.",
         "price": 13.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 13.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11729,14 +12014,14 @@
         "description": "Pasta tossed in our homemade meat sauce.",
         "price": 13.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 13.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11779,14 +12064,14 @@
         "name": "Pasta Bolognese",
         "description": "Pasta tossed in bolognese sauce.",
         "price": 13.95,
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
             "price": 13.95
           }
         ],
-        "pasta": [
+        "types": [
           {
             "id": 1,
             "name": "Spaghetti"
@@ -11833,7 +12118,7 @@
         "description": "Breaded eggplant slices with marinara and mozzarella cheese, served over spaghetti.",
         "price": 13.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
@@ -11870,7 +12155,7 @@
         "description": "Three breaded chicken fillets with marinara and mozzarella cheese, served over spaghetti.",
         "price": 14.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
@@ -11907,7 +12192,7 @@
         "description": "Breaded chicken fillet and eggplant slices with marinara and mozzarella cheese, served over spaghetti.",
         "price": 14.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
@@ -11944,7 +12229,7 @@
         "description": "Fresh grilled chicken in a creamy cheesy tomato sauce, served over spaghetti.",
         "price": 15.25,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
@@ -11981,7 +12266,7 @@
         "description": "Fresh grilled chicken and sweet red peppers sauteed with garlic in a cream sauce over spaghetti.",
         "price": 15.25,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Pasta",
@@ -12020,7 +12305,7 @@
         "description": "Marinated ground lamb, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
         "price": 17.95,
         "imageUrl": "adana-kebab.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12062,7 +12347,7 @@
         "description": "Spiced and grilled ground beef and lamb. Served with rice and tomato onion and hot pepper. Halal.",
         "price": 17.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12104,7 +12389,7 @@
         "description": "Marinated chunks of chicken breast, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
         "price": 17.95,
         "imageUrl": "chicken-shish-kebab.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12146,7 +12431,7 @@
         "description": "Shawarma. Thin sliced, marinated lamb and beef cooked on a vertical spit. Served with rice and tomato, onion and hot pepper. Halal.",
         "price": 18.95,
         "imageUrl": "doner-kebab.jpeg",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12188,7 +12473,7 @@
         "description": "Thin sliced marinated lamb and beef cooked on a vertical spit smothered in a fresh tomato sauce with yogurt on the side. Halal.",
         "price": 18.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12230,7 +12515,7 @@
         "description": "Grilled fillet mignon over toasted pita, smothered in a fresh tomato sauce with yogurt on the side. Halal.",
         "price": 20.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12272,7 +12557,7 @@
         "description": "Chunks of lamb, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
         "price": 20.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12314,7 +12599,7 @@
         "description": "Marinated chunks of beef sauteed with tomato, green pepper, onion, herbs. Served with rice. Halal.",
         "price": 20.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12356,7 +12641,7 @@
         "description": "Chunks of filet mignon, skewered and grilled. Served with rice and tomato, onion and hot pepper. Halal.",
         "price": 20.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12398,7 +12683,7 @@
         "description": "A combination of Adana kebab, kofte kebab, chicken shish kebab and doner kebab. Served with basmati rice and tomato, onion, and hot pepper. Halal.",
         "price": 21.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12440,7 +12725,7 @@
         "description": "A combination of Adana kebab, chicken shish kebab, beef shish kebab, kofta kebab, and doner kebab. Served with basmati rice and tomato, onion and hot pepper. Halal.",
         "price": 23.95,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Entree",
@@ -12484,7 +12769,7 @@
         "description": "Filo dough, walnuts, pistachios and honey sugar syrup.",
         "price": 4.25,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "2 Pieces",
@@ -12517,7 +12802,7 @@
         "description": "Creamy cheesecake on a graham cracker crust.",
         "price": 4.25,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Dessert",
@@ -12537,7 +12822,7 @@
         "description": "Flourless, gluten-free cake.",
         "price": 4.25,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "2 Pieces",
@@ -12558,7 +12843,7 @@
         "name": "Soda",
         "price": 1.39,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Can",
@@ -12611,7 +12896,7 @@
         "_id": "8cf926fd-d61e-4984-8c7a-c8569a65ec73",
         "name": "Brisk Iced Tea",
         "price": 1.39,
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Can",
@@ -12631,7 +12916,7 @@
         "name": "Water",
         "price": 1.69,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Bottled",
@@ -12650,7 +12935,7 @@
         "name": "Gatorade",
         "price": 2.75,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Bevarage",
@@ -12670,7 +12955,7 @@
         "description": "Cold yogurt drink.",
         "price": 3.5,
         "imageUrl": "",
-        "option": [
+        "options": [
           {
             "id": 1,
             "name": "Bevarage",

@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "@/redux/features/cartSlices";
 import { isEmpty } from "lodash";
+import { handleOwnPizzaModal } from "@/redux/features/appSlices";
 
 const MenuItems = ({ menus }) => {
   const dispatch = useDispatch();
@@ -21,7 +22,10 @@ const MenuItems = ({ menus }) => {
         {menus.map((menu, i) => (
           <div
             key={i}
-            className="border border-primary/40 rounded-xl w-full  flex items-center h-44"
+            onClick={() => {
+              dispatch(handleOwnPizzaModal({ data: [menu] }));
+            }}
+            className="border border-primary/40 rounded-xl w-full  flex items-center h-44 cursor-pointer hover:border-primary"
           >
             <div className="w-full px-2">
               <div className="w-full flex items-center justify-between py-1">
