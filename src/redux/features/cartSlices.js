@@ -88,9 +88,8 @@ const calculateCartTotals = (state) => {
 
   // Loop through the cart items to calculate totalItems and totalPrice
   for (const item of state.cartItems) {
-    console.log("the item", item);
     totalItems += 1; // Count each distinct item (does not include quantity)
-    totalPrice += item.price * (item.quantity || 1);
+    totalPrice += item.totalPrice * (item.quantity || 1);
   }
 
   // Update state totals

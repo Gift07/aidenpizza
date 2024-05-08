@@ -1,10 +1,13 @@
+"use client";
+
 import React from "react";
 import CheckoutPayOrder from "./CheckoutPayOrder";
+import { useSelector } from "react-redux";
 
 const CheckoutDelivery = () => {
   return (
     <div className="w-full flex items-center justify-center py-3">
-      <div className="w-full lg:w-[80%] flex flex-col lg:flex-rowitems-start lg:gap-x-10 px-4 lg:px-0">
+      <div className="w-full lg:w-[80%] flex flex-col lg:flex-row items-start lg:gap-x-10 px-4 lg:px-0">
         <div className="w-full">
           <div>
             <h1 className="text-xl font-bold lg:text-3xl lg:font-medium">

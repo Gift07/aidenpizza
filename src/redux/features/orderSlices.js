@@ -76,30 +76,6 @@ const orderSlice = createSlice({
       state.totalPrice += action.payload.price;
     },
 
-    createOrder(state, action) {
-      const { itemName, quantity } = action.payload;
-      const order = {};
-
-      // Check each property and add to the order object if it's not null or an empty array
-      if (state.selectedOption !== null)
-        order.selectedOption = state.selectedOption;
-      if (state.selectedToppings.length > 0)
-        order.selectedToppings = state.selectedToppings;
-      if (state.selectedExtra.length > 0)
-        order.selectedExtra = state.selectedExtra;
-      if (state.selectedType !== null) order.selectedType = state.selectedType;
-      if (state.selectedDressing !== null)
-        order.selectedDressing = state.selectedDressing;
-      if (state.selectedSauce !== null)
-        order.selectedSauce = state.selectedSauce;
-
-      // Add itemName and totalPrice to the order object
-      order.itemName = itemName;
-      order["quantity"] = quantity;
-      order.totalPrice = state.totalPrice;
-      console.log(order);
-      state.order = order;
-    },
     cleanupOrder(state) {
       //performing a cleanup
       state.basePrice = 0;
@@ -123,7 +99,6 @@ export const {
   selectSauce,
   addType,
   addDressing,
-  createOrder,
   cleanupOrder,
 } = orderSlice.actions;
 export default orderSlice.reducer;

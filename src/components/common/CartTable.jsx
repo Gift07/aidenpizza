@@ -53,12 +53,12 @@ const CartTable = ({ cartItems }) => {
                     </div>
                   )}
                   <h1 className=" text-sm lg:text-lg max-w-[120px] truncate">
-                    {item.name}
+                    {item.itemName}
                   </h1>
                 </div>
               </th>
               <td className="px-2 lg:px-6 py-4 text-sm lg:text-lg">
-                ${item.price}
+                ${item.totalPrice.toFixed(2)}
               </td>
               <td className="px-2 lg:px-6 py-4">
                 <div className="flex items-center gap-x-2 lg:gap-x-3">
@@ -86,7 +86,7 @@ const CartTable = ({ cartItems }) => {
                 </div>
               </td>
               <td className="px-2 lg:px-6 py-4 text-sm lg:text-lg font-medium lg:font-normal">
-                ${(parseFloat(item.price) * item.quantity).toFixed(2)}
+                ${(parseFloat(item.totalPrice) * item.quantity).toFixed(2)}
               </td>
               <td className="px-2 lg:px-6 py-4 text-xl text-red-500">
                 <RiDeleteBin6Line />

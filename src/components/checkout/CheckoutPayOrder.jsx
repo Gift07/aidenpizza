@@ -3,10 +3,13 @@
 import { useRouter } from "next/navigation";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 const CheckoutPayOrder = () => {
   const router = useRouter();
+  const { cartItems, cartTotalPrice } = useSelector((state) => state.cart);
   const [errorMessage, setMessage] = useState("");
+
   const initialOptions = {
     "client-id": "test",
     "enable-funding": "venmo",
@@ -24,12 +27,7 @@ const CheckoutPayOrder = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          cart: [
-            {
-              id: "1",
-              quantity: "2",
-            },
-          ],
+          cart: cartItems,
         }),
       });
 
@@ -106,16 +104,16 @@ const CheckoutPayOrder = () => {
       <hr />
       <div>
         <div className="w-full flex items-center justify-between py-2 text-lg">
-          <h1>Shipping cost</h1>
-          <h1>$120</h1>
+          <h1>Items Price</h1>
+          <h1>${cartTotalPrice}</h1>
         </div>
         <div className="w-full flex items-center justify-between py-2 text-lg">
           <h1>Shipping cost</h1>
-          <h1>$120</h1>
+          <h1>$0</h1>
         </div>
         <div className="w-full flex items-center justify-between py-2 text-lg">
-          <h1>Shipping cost</h1>
-          <h1>$120</h1>
+          <h1>Total Price</h1>
+          <h1>${cartTotalPrice}</h1>
         </div>
         <div className="w-full flex items-center justify-center pt-6">
           <PayPalScriptProvider options={initialOptions}>

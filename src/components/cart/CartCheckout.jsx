@@ -12,7 +12,7 @@ const CartCheckout = ({ cartPrice }) => {
       <div>
         <div className="w-full flex items-center justify-between py-1 lg:py-2 text-sm font-medium lg:font-light lg:text-lg">
           <h1>Cart cost</h1>
-          <h1>${cartPrice}</h1>
+          <h1>${cartPrice.toFixed(2)}</h1>
         </div>
         <div className="w-full flex items-center justify-between py-1 lg:py-2 text-sm font-medium lg:font-light lg:text-lg">
           <h1>Shipping cost</h1>
@@ -20,7 +20,7 @@ const CartCheckout = ({ cartPrice }) => {
         </div>
         <div className="w-full flex items-center justify-between py-1 lg:py-2 text-sm font-medium lg:font-light lg:text-lg">
           <h1>Total cost</h1>
-          <h1>${cartPrice}</h1>
+          <h1>${cartPrice.toFixed(2)}</h1>
         </div>
         <div className="w-full flex items-center justify-center pt-1 lg:pt-6">
           <button

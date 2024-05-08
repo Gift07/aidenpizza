@@ -14,11 +14,20 @@ import { createOrder, selectOption } from "@/redux/features/orderSlices";
 
 import { isEmpty } from "lodash";
 import { addItemToCart } from "@/redux/features/cartSlices";
+import { createMyOrder } from "@/helpers";
 
 const OwnPizzaModal = () => {
   const dispatch = useDispatch();
   const pizzaData = useSelector(selectPizzaData);
-  const { totalPrice, order } = useSelector((state) => state.order);
+  const {
+    totalPrice,
+    selectedOption,
+    selectedToppings,
+    selectedExtra,
+    selectedSause,
+    selectedDressing,
+    selectedType,
+  } = useSelector((state) => state.order);
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
@@ -36,7 +45,17 @@ const OwnPizzaModal = () => {
   };
   //adding items to cart
   const handleAddTocart = () => {
-    dispatch(createOrder({ itemName: pizzaData[0].name, quantity }));
+    const order = createMyOrder({
+      selectedOption,
+      selectedToppings,
+      selectedExtra,
+      selectedType,
+      selectedDressing,
+      selectedSauce: selectedSause,
+      itemName: pizzaData[0].name,
+      quantity,
+      totalPrice,
+    });
 
     if (!isEmpty(order)) {
       dispatch(addItemToCart(order));

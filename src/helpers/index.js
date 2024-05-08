@@ -98,3 +98,55 @@ async function handleResponse(response) {
     throw new Error(errorMessage);
   }
 }
+
+export const createMyOrder = (orderedItems) => {
+  const {
+    selectedOption,
+    selectedToppings,
+    selectedExtra,
+    selectedType,
+    selectedDressing,
+    selectedSauce,
+    totalPrice,
+    quantity,
+    itemName,
+  } = orderedItems;
+  const order = {};
+
+  // Check each property and add to the order object if it's not null or an empty array
+  if (selectedOption !== null) {
+    order.selectedOption = selectedOption;
+  }
+  if (selectedToppings.length > 0) {
+    order.selectedToppings = selectedToppings;
+  }
+  if (selectedExtra.length > 0) {
+    order.selectedExtra = selectedExtra;
+  }
+  if (selectedType !== null) {
+    order.selectedType = selectedType;
+  }
+  if (selectedDressing !== null) {
+    order.selectedDressing = selectedDressing;
+  }
+  if (selectedSauce !== null) {
+    order.selectedSauce = selectedSauce;
+  }
+
+  // Add itemName and totalPrice to the order object
+  order.itemName = itemName;
+  order["quantity"] = quantity;
+  order.totalPrice = totalPrice;
+
+  return order;
+};
+
+export function generateOrderId() {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let orderId = "";
+  for (let i = 0; i < 10; i++) {
+    orderId += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return orderId;
+}
