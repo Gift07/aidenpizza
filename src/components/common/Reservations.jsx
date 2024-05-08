@@ -8,105 +8,26 @@ function Reservations() {
         <div className="w-full flex items-center justify-center">
           <div className="w-full px-4 lg:px-0 lg:pl-40">
             <div className="w-full flex text-xl lg:text-2xl font-semibold items-center text-primary">
-              Reservations <hr className="w-24 h-1 bg-primary" />
+              About Us <hr className="w-24 h-1 bg-primary" />
             </div>
             <h1 className="text-2xl lg:text-3xl font-semibold py-2 Coolvetica">
-              Book a Table Now
+              Know More About Aden Pizzeria
             </h1>
-            <div className="w-full lg:w-[80%] border border-black/10 rounded-lg bg-black/5 px-3 py-5">
-              <div className="w-full flex flex-col lg:flex-row items-center gap-x-3 ">
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    className="block  text-sm font-medium text-black/70"
-                  >
-                    Base input
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    className="block text-sm font-medium text-black/70 "
-                  >
-                    Base inputs
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row items-center gap-x-3">
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    className="block text-sm font-medium text-black/70"
-                  >
-                    Base input
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    className="block text-sm font-medium text-black/70"
-                  >
-                    Base input
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row items-center gap-x-3">
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    className="block text-sm font-medium text-black/70"
-                  >
-                    Base input
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-                <div className="mb-3 w-full">
-                  <label
-                    for="base-input"
-                    class="block text-sm font-medium text-black/70"
-                  >
-                    Base input
-                  </label>
-                  <input
-                    type="text"
-                    id="base-input"
-                    placeholder="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                  />
-                </div>
-              </div>
-              <button className="bg-secondary  w-full py-2 rounded-lg flex items-center justify-center text-white ">
-                Book Now
-              </button>
+            <div>
+              <p>
+                {`Discover a new favorite by trying the top pizzas in Bethesda.
+                Local residents have made Aden Pizza & Mediterranean one 
+                of the
+                most popular in the area. Sample what they have to offer and see
+                if you agree. Many pizzerias in Bethesda offer more than just
+                pizza, so try some other local top dishes. Pasta, salads,
+                calzones, sandwiches, and more can all give you something
+                different to enjoy. Don't forget to try Create Your Own Pizza
+                for a truly local experience. You haven't really been to
+                Bethesda until you've tried it! Add french fries to your pizza
+                to make for a more substantial meal. Aden Pizza & Mediterranean
+                has plenty of offerings to make sure you won't go away hungry.`}
+              </p>
             </div>
           </div>
         </div>
