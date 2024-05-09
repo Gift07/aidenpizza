@@ -1,10 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import CheckoutPayOrder from "./CheckoutPayOrder";
 import { useSelector } from "react-redux";
 
 const CheckoutDelivery = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+  });
+
+  // Function to handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you can perform any action with the form data, like sending it to an API
+    console.log(formData);
+  };
+
   return (
     <div className="w-full flex items-center justify-center py-3">
       <div className="w-full lg:w-[80%] flex flex-col lg:flex-row items-start lg:gap-x-10 px-4 lg:px-0">
@@ -18,94 +41,79 @@ const CheckoutDelivery = () => {
             <div className="w-full flex flex-col lg:flex-row items-center gap-x-3 ">
               <div className="mb-3 w-full">
                 <label
-                  for="base-input"
+                  htmlFor="name-input"
                   className="block  text-sm font-medium text-black/70"
                 >
-                  Base input
+                  Name
                 </label>
                 <input
                   type="text"
-                  id="base-input"
-                  placeholder="name"
+                  id="name-input"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
                 />
               </div>
               <div className="mb-3 w-full">
                 <label
-                  for="base-input"
-                  className="block text-sm font-medium text-black/70 "
+                  htmlFor="email-input"
+                  className="block  text-sm font-medium text-black/70"
                 >
-                  Base inputs
+                  Email
                 </label>
                 <input
-                  type="text"
-                  id="base-input"
-                  placeholder="email"
+                  type="email"
+                  id="email-input"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
                 />
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row items-center gap-x-3">
+            <div className="w-full flex flex-col lg:flex-row items-center gap-x-3 ">
               <div className="mb-3 w-full">
                 <label
-                  for="base-input"
-                  className="block text-sm font-medium text-black/70"
+                  htmlFor="phone-input"
+                  className="block  text-sm font-medium text-black/70"
                 >
-                  Base input
+                  Phone
                 </label>
                 <input
-                  type="text"
-                  id="base-input"
-                  placeholder="name"
+                  type="tel"
+                  id="phone-input"
+                  name="phone"
+                  placeholder="Phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
                 />
               </div>
               <div className="mb-3 w-full">
                 <label
-                  for="base-input"
-                  className="block text-sm font-medium text-black/70"
+                  htmlFor="location-input"
+                  className="block  text-sm font-medium text-black/70"
                 >
-                  Base input
+                  Location
                 </label>
                 <input
                   type="text"
-                  id="base-input"
-                  placeholder="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col lg:flex-row items-center gap-x-3">
-              <div className="mb-3 w-full">
-                <label
-                  for="base-input"
-                  className="block text-sm font-medium text-black/70"
-                >
-                  Base input
-                </label>
-                <input
-                  type="text"
-                  id="base-input"
-                  placeholder="name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
-                />
-              </div>
-              <div className="mb-3 w-full">
-                <label
-                  for="base-input"
-                  class="block text-sm font-medium text-black/70"
-                >
-                  Base input
-                </label>
-                <input
-                  type="text"
-                  id="base-input"
-                  placeholder="email"
+                  id="location-input"
+                  name="location"
+                  placeholder="Location"
+                  value={formData.location}
+                  onChange={handleInputChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none"
                 />
               </div>
             </div>
-            <button className="bg-secondary  w-full py-2 rounded-lg flex items-center justify-center text-white ">
+            <button
+              type="submit"
+              className="bg-secondary  w-full py-2 rounded-lg flex items-center justify-center text-white "
+            >
               Book Now
             </button>
           </div>
