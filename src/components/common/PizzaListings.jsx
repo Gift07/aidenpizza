@@ -116,9 +116,8 @@ const PizzaListings = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="py-2">
-                      Officia sunt est veniam quis consequat laborum culpa
-                      aliquip mollit excepteur mollit cillum.
+                    <div className="py-2 h-14 overflow-hidden line-clamp-2">
+                      {menu.description}
                     </div>
                     <div>
                       <button

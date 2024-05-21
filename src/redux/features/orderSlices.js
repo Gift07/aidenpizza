@@ -6,6 +6,7 @@ const initialState = {
   selectedExtra: [],
   totalPrice: 0,
   basePrice: 0,
+  sausePrice: 0,
   selectedType: null,
   selectedDressing: null,
   selectedSauce: null,
@@ -20,10 +21,8 @@ const orderSlice = createSlice({
       console.log("got in the option", action);
       state.selectedOption = action.payload;
       if (state.basePrice === 0) {
-        console.log("the base price is", state.basePrice);
         state.totalPrice = action.payload.price;
         state.basePrice = action.payload.price;
-        console.log("the base price is", state.basePrice);
       } else if (state.basePrice > 0) {
         state.totalPrice =
           state.totalPrice - state.basePrice + action.payload.price;
@@ -73,13 +72,21 @@ const orderSlice = createSlice({
 
     selectSauce(state, action) {
       state.selectedSauce = action.payload;
-      state.totalPrice += action.payload.price;
+      if (state.selectedSauce === 0) {
+        state.totalPrice += action.payload.price;
+        state.sausePrice += action.payload.price;
+      } else {
+        state.totalPrice =
+          state.totalPrice - state.sausePrice + action.payload.price;
+        state.sausePrice = action.payload.price;
+      }
     },
 
     cleanupOrder(state) {
       //performing a cleanup
       state.basePrice = 0;
       state.totalPrice = 0;
+      state.sausePrice = 0;
       state.selectedDressing = null;
       state.selectedExtra = [];
       state.selectedSauce = null;

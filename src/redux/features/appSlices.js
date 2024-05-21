@@ -5,6 +5,12 @@ const initialState = {
   sidebar: false,
   ownPizzaModal: false,
   pizzaData: null,
+  formData: {
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+  },
 };
 
 const appSlices = createSlice({
@@ -24,10 +30,16 @@ const appSlices = createSlice({
         state.pizzaData = null;
       }
     },
+    handleUpdateFormData: (state, { payload }) => {
+      const { name, value } = payload;
+      state.formData[name] = value;
+    },
   },
 });
 
-export const { handleSideBar, handleOwnPizzaModal } = appSlices.actions;
+export const { handleSideBar, handleOwnPizzaModal, handleUpdateFormData } =
+  appSlices.actions;
 export const selectPizzaData = (state) => state.app.pizzaData;
+export const selectFormData = (state) => state.app.formData;
 
 export default appSlices.reducer;

@@ -48,7 +48,6 @@ const Hero = ({ dispatch }) => {
   const handleCreateOwnPizza = async () => {
     const res = await fetch("/api/specialmenus?status=own-pizza");
     const response = await res.json();
-    console.log(response);
     if (!isEmpty(response.data)) {
       dispatch(handleOwnPizzaModal({ data: response.data }));
     }
@@ -78,8 +77,7 @@ const Hero = ({ dispatch }) => {
             <h1 className="Coolvetica font-semibold ">in the city</h1>
 
             <p className="text-sm py-2 brush">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Discover a new favorite by trying the top pizzas in Bethesda.
             </p>
 
             <div>
@@ -128,8 +126,8 @@ const Hero = ({ dispatch }) => {
             always tasty
           </h1>
           <p className="max-w-sm py-3 text-black/70">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority haved
+            You can get your pizza to go with curbside pickup from Aden Pizza &
+            Mediterranean. Grab something tasty on your way home.
           </p>
         </div>
         <div className="pl-36">

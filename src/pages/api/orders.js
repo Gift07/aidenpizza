@@ -8,8 +8,8 @@ const handler = async (req, res) => {
       body = req.body;
     }
     //sending the email to the user
-    const { cart } = body;
-    const { jsonResponse, httpStatusCode } = await createOrder(cart);
+    const { price } = body;
+    const { jsonResponse, httpStatusCode } = await createOrder(price);
 
     return res.status(httpStatusCode).json(jsonResponse);
   } catch (error) {

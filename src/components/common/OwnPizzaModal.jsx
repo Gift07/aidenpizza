@@ -10,7 +10,11 @@ import { useDispatch, useSelector } from "react-redux";
 import BackDropComponent from "./BackDropComponent";
 import { AiOutlineMinus } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
-import { createOrder, selectOption } from "@/redux/features/orderSlices";
+import {
+  cleanupOrder,
+  createOrder,
+  selectOption,
+} from "@/redux/features/orderSlices";
 
 import { isEmpty } from "lodash";
 import { addItemToCart } from "@/redux/features/cartSlices";
@@ -75,6 +79,7 @@ const OwnPizzaModal = () => {
               <div
                 onClick={() => {
                   dispatch(handleOwnPizzaModal({ data: null }));
+                  dispatch(cleanupOrder());
                 }}
                 className="h-6 w-6 rounded-full flex items-center justify-center bg-white"
               >

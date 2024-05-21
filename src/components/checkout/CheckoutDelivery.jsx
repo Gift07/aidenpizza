@@ -2,30 +2,19 @@
 
 import React, { useState } from "react";
 import CheckoutPayOrder from "./CheckoutPayOrder";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  handleUpdateFormData,
+  selectFormData,
+} from "@/redux/features/appSlices";
 
 const CheckoutDelivery = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    location: "",
-  });
-
+  const dispatch = useDispatch();
+  const formData = useSelector(selectFormData);
   // Function to handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can perform any action with the form data, like sending it to an API
-    console.log(formData);
+    dispatch(handleUpdateFormData({ name, value }));
   };
 
   return (
@@ -34,7 +23,7 @@ const CheckoutDelivery = () => {
         <div className="w-full">
           <div>
             <h1 className="text-xl font-bold lg:text-3xl lg:font-medium">
-              Add Billing Address
+              Add Shipping Address
             </h1>
           </div>
           <div className="w-full lg:w-[80%] border border-black/10 rounded-lg bg-black/5 px-3 py-5">
@@ -110,12 +99,6 @@ const CheckoutDelivery = () => {
                 />
               </div>
             </div>
-            <button
-              type="submit"
-              className="bg-secondary  w-full py-2 rounded-lg flex items-center justify-center text-white "
-            >
-              Book Now
-            </button>
           </div>
         </div>
         <div className="w-full lg:w-1/3">

@@ -2,6 +2,33 @@ import Image from "next/image";
 import React from "react";
 
 const OurStrength = () => {
+  const strengths = [
+    {
+      id: "1",
+      imageUrl: "all-kinds-of-foods.png",
+      title: "All Kinds of Foods",
+      description: "We offer a wide variety of foods to cater to all tastes.",
+    },
+    {
+      id: "2",
+      imageUrl: "best-taste.png",
+      title: "Best Taste",
+      description: "Our recipes are crafted to ensure the best taste.",
+    },
+    {
+      id: "3",
+      imageUrl: "fresh-foods.png",
+      title: "Fresh Foods",
+      description: "We use only the freshest ingredients in our dishes.",
+    },
+    {
+      id: "4",
+      imageUrl: "on-time-delivery.png",
+      title: "On-time Delivery",
+      description:
+        "We guarantee timely delivery for a great dining experience.",
+    },
+  ];
   return (
     <div className="w-full relative bg-bgyellow py-10 my-10">
       <div className="w-full flex items-center justify-center px-4 lg:px-0">
@@ -32,21 +59,20 @@ const OurStrength = () => {
       </div>
       <div className="w-full flex items-center justify-center py-12 px-4 lg:px-0">
         <div className="lg:w-[80%] flex items-center lg:flex-row flex-col">
-          {Array.from({ length: 4 }).map((_, i) => (
+          {strengths.map((strength, i) => (
             <div key={i}>
               <Image
-                src={"/all-kinds-of-foods.png"}
+                src={`/${strength.imageUrl}`}
                 alt="header"
                 height={50}
                 width={50}
               />
               <div className="py-3">
                 <h1 className="text-3xl font-medium Coolvetica truncate">
-                  All Kinds of foods
+                  {strength.title}
                 </h1>
                 <p className="max-w-md py-3 text-black/70">
-                  Lorem Ipsum is simply dummy text of the printing and type
-                  setting industry.
+                  {strength.description}
                 </p>
               </div>
             </div>

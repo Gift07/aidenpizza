@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
 import { BsCart2, BsCart3 } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { IoIosMenu } from "react-icons/io";
@@ -13,6 +12,12 @@ const NavBarComponent = () => {
   const [scrolled, setScrolled] = useState(false);
   const { cartTotalItems } = useSelector((state) => state.cart);
   const pathname = usePathname();
+
+  const handleRedirect = () => {
+    window.open(
+      "https://www.google.com/maps/place/7812+Old+Georgetown+Rd,+Bethesda,+MD+20814,+USA/@38.9877106,-77.0994846,17z/data=!4m6!3m5!1s0x89b7c963010fd5c9:0x38597c141fc2f387!8m2!3d38.9876161!4d-77.0993712!16s%2Fg%2F11b8v52ydg?entry=ttu"
+    );
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -38,7 +43,7 @@ const NavBarComponent = () => {
             scrolled && `border-b border-black/10  fixed top-0 duration-200 `
           }`}
         >
-          <div className=" xl:w-[1280px]  w-full flex items-center justify-between">
+          <div className="  w-full flex items-center justify-between">
             <div className="w-20 h-10  flex items-center justify-center ">
               <Image
                 src={"/aden.avif"}
@@ -82,22 +87,25 @@ const NavBarComponent = () => {
                     Menu
                   </Link>
                 </li>
-                <li className="flex gap-x-2 bg-black/5 rounded-lg px-2 py-1">
+                <li className="flex gap-x-2 bg-black/5 rounded-lg px-2 py-1 cursor-pointer">
                   <Link
                     href={"/cart"}
-                    className={`hover:text-textprimary duration-200 cursor-pointer   flex items-center  py-1${
+                    className={`hover:text-textprimary duration-200   flex items-center  py-1${
                       pathname === "/cart" ? "text-primary" : "text-black"
                     }`}
                   >
                     <BsCart3 />
-                  </Link>{" "}
+                  </Link>
                   |
                   <div className="bg-primary  h-6 w-6 flex items-center justify-center rounded-full text-white text-sm -top-5 right-0">
                     {cartTotalItems}
                   </div>
                 </li>
-                <li className="flex items-center gap-x-1 bg-black text-white rounded-lg px-2 py-1">
-                  Call us
+                <li
+                  onClick={handleRedirect}
+                  className="flex items-center gap-x-1 text-black rounded-lg px-2 py-1 cursor-pointer"
+                >
+                  7812 Old Georgetown Rd, Bethesda, MD 20814
                 </li>
               </ul>
               <div className="lg:hidden flex items-center gap-x-4">

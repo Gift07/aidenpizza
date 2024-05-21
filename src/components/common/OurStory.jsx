@@ -57,12 +57,11 @@ const OurStory = () => {
                 <br /> Of Quality Foods
               </h1>
               <p className="max-w-xl py-3 text-black/70 text-sm">
-                {`  Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.`}
+                {`  A Slice partner for 13 years, this restaurant is a mainstay of
+                the community. Try them for yourself and see why they're such a
+                local favorite. You can get your pizza to go with curbside
+                pickup from Aden Pizza & Mediterranean. Grab something tasty on
+                your way home.`}
               </p>
               <div>
                 <button className="bg-secondary px-10 py-2 rounded-lg flex items-center justify-center text-white ">

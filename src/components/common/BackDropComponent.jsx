@@ -16,7 +16,7 @@ const BackDropComponent = ({ data }) => {
     selectedOption,
     selectedToppings,
     selectedExtra,
-    selectedSause,
+    selectedSauce,
     selectedDressing,
     selectedType,
   } = useSelector((state) => state.order);
@@ -234,10 +234,10 @@ const BackDropComponent = ({ data }) => {
               >
                 <div className="flex items-center">
                   <input
-                    checked={selectedSause.id === sause.id}
+                    checked={selectedSauce?.id === sause.id}
                     id={sause.id}
                     type="radio"
-                    value={sause}
+                    value={sause.id}
                     onChange={handlSelectSauce}
                     name={sause.name}
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 outline-none"
