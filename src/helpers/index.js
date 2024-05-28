@@ -1,6 +1,6 @@
 const client_id = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
 const client_secret = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_SECRET;
-const base = "https://api-m.sandbox.paypal.com";
+const base = "https://api-m.paypal.com";
 
 export const generateAccessToken = async () => {
   try {

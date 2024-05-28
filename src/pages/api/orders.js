@@ -2,7 +2,6 @@ import { createOrder } from "@/helpers";
 
 const handler = async (req, res) => {
   try {
-    console.log("got here", req.body);
     let body = null;
     if (req.method === "POST") {
       body = req.body;
