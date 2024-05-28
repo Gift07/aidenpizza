@@ -1,3 +1,4 @@
+import { handleUpdateNotes, selectNotes } from "@/redux/features/appSlices";
 import {
   addDressing,
   addType,
@@ -20,6 +21,7 @@ const BackDropComponent = ({ data }) => {
     selectedDressing,
     selectedType,
   } = useSelector((state) => state.order);
+  const kitchenNotes = useSelector(selectNotes);
   const dispatch = useDispatch();
 
   //handle toppings
@@ -31,6 +33,10 @@ const BackDropComponent = ({ data }) => {
     if (!isEmpty(topping)) {
       dispatch(changeTopping(topping));
     }
+  };
+
+  const handleChange = (e) => {
+    dispatch(handleUpdateNotes(e));
   };
 
   //handle changing extraction
@@ -54,6 +60,7 @@ const BackDropComponent = ({ data }) => {
       dispatch(selectSauce(sause));
     }
   };
+
   //handle select toppings
   const handleSelectOptions = (e) => {
     const { value } = e.target;
@@ -69,7 +76,6 @@ const BackDropComponent = ({ data }) => {
   //handle select toppings
   const handleSelectType = (e) => {
     const { value } = e.target;
-    console.log("the value is " + value);
     const type = data.type.find((ty) => ty.id.toString() === value);
 
     if (!isEmpty(type)) {
@@ -387,7 +393,10 @@ const BackDropComponent = ({ data }) => {
         <textarea
           id="message"
           rows="4"
-          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          name="kitchenNotes"
+          value={kitchenNotes}
+          onChange={handleChange}
+          className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Write your thoughts here..."
         />
         <h1>Have an allergy, dietary restriction, or special request?</h1>
