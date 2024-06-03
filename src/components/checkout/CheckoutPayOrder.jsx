@@ -36,8 +36,6 @@ const CheckoutPayOrder = () => {
 
       const orderData = await response.json();
 
-      console.log(orderData);
-
       if (orderData.id) {
         return orderData.id;
       } else {
