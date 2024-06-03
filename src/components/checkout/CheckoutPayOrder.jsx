@@ -5,6 +5,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectFormData } from "@/redux/features/appSlices";
+import { isEmpty } from "lodash";
 
 const CheckoutPayOrder = () => {
   const router = useRouter();
@@ -131,16 +132,25 @@ const CheckoutPayOrder = () => {
           <h1>${cartTotalPrice}</h1>
         </div>
         <div className="w-full flex items-center justify-center pt-6">
-          <PayPalScriptProvider options={initialOptions}>
-            <PayPalButtons
-              style={{
-                shape: "pill",
-                layout: "vertical",
-              }}
-              createOrder={handleCreateOrder}
-              onApprove={(data, actions) => handleApprove(data, actions)}
-            />
-          </PayPalScriptProvider>
+          {!isEmpty(formData.name) &&
+          !isEmpty(formData.email) &&
+          !isEmpty(formData.phone) &&
+          !isEmpty(formData.location) ? (
+            <PayPalScriptProvider options={initialOptions}>
+              <PayPalButtons
+                style={{
+                  shape: "pill",
+                  layout: "vertical",
+                }}
+                createOrder={handleCreateOrder}
+                onApprove={(data, actions) => handleApprove(data, actions)}
+              />
+            </PayPalScriptProvider>
+          ) : (
+            <div>
+              <h1>Please fill out delivery information to continue</h1>
+            </div>
+          )}
         </div>
       </div>
     </div>

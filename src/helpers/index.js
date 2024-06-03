@@ -99,6 +99,16 @@ async function handleResponse(response) {
   }
 }
 
+export function generateOrderId() {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let orderId = "";
+  for (let i = 0; i < 10; i++) {
+    orderId += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return orderId;
+}
+
 export const createMyOrder = (orderedItems) => {
   const {
     selectedOption,
@@ -137,16 +147,7 @@ export const createMyOrder = (orderedItems) => {
   order.itemName = itemName;
   order["quantity"] = quantity;
   order.totalPrice = totalPrice;
+  order["order_id"] = generateOrderId();
 
   return order;
 };
-
-export function generateOrderId() {
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let orderId = "";
-  for (let i = 0; i < 10; i++) {
-    orderId += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return orderId;
-}
