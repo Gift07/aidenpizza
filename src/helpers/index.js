@@ -151,3 +151,58 @@ export const createMyOrder = (orderedItems) => {
 
   return order;
 };
+
+export function createOrderTemplate({
+  fullName,
+  phoneNumber,
+  email,
+  location,
+  header,
+  message,
+  cartItems,
+  totalPrice,
+}) {
+  const cartItemsHtml = cartItems
+    .map(
+      (item) => `
+    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+      <h3>${item.itemName}</h3>
+      <p>Price: $${item.totalPrice}</p>
+      <p>Quantity: ${item.quantity}</p>
+      ${item.selectedOption ? `<p>Option: ${item.selectedOption}</p>` : ""}
+      ${
+        item.selectedToppings.length
+          ? `<p>Toppings: ${item.selectedToppings.join(", ")}</p>`
+          : ""
+      }
+      ${
+        item.selectedExtra.length
+          ? `<p>Extras: ${item.selectedExtra.join(", ")}</p>`
+          : ""
+      }
+      ${item.selectedType ? `<p>Type: ${item.selectedType}</p>` : ""}
+      ${
+        item.selectedDressing ? `<p>Dressing: ${item.selectedDressing}</p>` : ""
+      }
+      ${item.selectedSauce ? `<p>Sauce: ${item.selectedSauce}</p>` : ""}
+    </div>
+  `
+    )
+    .join("");
+
+  return `
+    <div style="font-family: Arial, sans-serif;">
+      <h1>${header}</h1>
+      <p>${message}</p>
+      <p><strong>Customer Information:</strong></p>
+      <p>Name: ${fullName}</p>
+      <p>Email: ${email}</p>
+      <p>Phone: ${phoneNumber}</p>
+      <p>Location: ${location}</p>
+      <hr />
+      <h2>Order Details</h2>
+      ${cartItemsHtml}
+      <h3>Total Price: $${totalPrice}</h3>
+    </div>
+  `;
+}
