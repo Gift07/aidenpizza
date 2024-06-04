@@ -23,7 +23,7 @@ async function SendEmail({
   try {
     const info = await transporter.sendMail({
       from: `"Bethesda App 👻" <${from}>`, // sender address
-      to: "kitchen@bethesda.com", // list of receivers, adjust this as necessary
+      to: "bethehealthcare@gmail.com", // list of receivers, adjust this as necessary
       subject: "New Order from Bethesda Website ✔", // Subject line
       html: createOrderTemplate({
         fullName,
